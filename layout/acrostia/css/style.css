@@ -1,0 +1,1736 @@
+/*Подключаем шрифты ===============================================================*/
+
+/*Шрифты из гугла - Damion, Lato*/
+@import url('https://fonts.googleapis.com/css?family=Damion|Lato:300,400,700,900&display=swap');
+
+
+
+/* Стили слайдера ================================================================================================*/
+.slider{
+	width: 1600px;
+	height: 1000px;
+	position: relative;
+}
+
+/* Управляющие стрелки слайдера */
+.slider .slider-arrows .arrow{
+	width: 34px;
+	height: 56px;
+	top: 50.3%;
+	position: absolute;
+	cursor: pointer;
+	transition: width .3s, height .3s, left .3s, right .3s, top .3s;
+	background-size: cover;
+}
+
+/* Левая стрелка*/
+.slider .slider-arrows .arrow.arrow-left{
+	transform: translate(-50%, -50%);
+	left: 4.125%;
+	background-image: url("../img/slider/slider-arrow-left.png");
+}
+/* Правая стрелка*/
+.slider .slider-arrows .arrow.arrow-right{
+	transform: translate(50%, -50%);
+	right: 4.125%;
+	background-image: url("../img/slider/slider-arrow-right.png");
+}
+
+/*Увеличение стрелки при наведении*/
+.slider .slider-arrows .arrow:hover{
+	width: 45px;
+	height: 76px;
+}
+
+/* Блок управляющих точки слайдера */
+.slider .slider-dots{
+	height: 30px;
+	position: absolute;
+	bottom: 6%;
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+/* Управляющие точки слайдера */
+.slider .slider-dots .dot{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #fff;
+	float: left;
+	margin-right: 40px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: .2s;
+	transform: translateY(-50%);
+
+}
+/* Последняя точка */
+.slider .slider-dots .dot:last-of-type{
+	margin-right: 0;
+}
+
+/* Точка при наведении */
+.slider .slider-dots .dot:not(.active):hover{
+	opacity: .9;
+	transform: translateY(-50%) scale(1.06);
+}
+
+/* Активная точка */
+.slider .slider-dots .dot.active{
+	opacity: 1;
+	background-color: #74c7d5;
+	cursor: auto;
+}
+
+/* Слайд */
+.slider .slideswrapper .slide{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+/* Конец стилей слайдера */
+
+
+
+/* Галерея ======================================================================================================== */
+/*
+Функционирование галереи осуществляется с использованием плагина TouchTouch и библиотеки jQuery.
+*/
+
+/* Блок заголовка и фильтров */
+.gallery .block-title-filters{
+	padding: 32px 28px 32px 19px;
+	border-top: 1px solid #94b963;
+	border-bottom: 1px solid #94b963;
+	margin-top: 53px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Текста заголовка галереи */
+.gallery .block-title-filters .title{
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 40px;
+}
+
+/* Кнопки вкладок */
+.gallery .block-title-filters .filters button{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	margin-right: 19px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 11px 10px;
+	border-radius: 4px;
+	transition: .5s;
+}
+/* Убираем отступ последней вкладки */
+.gallery .block-title-filters .filters button:last-of-type{
+	margin-right: 0;
+}
+/* Стиль при наведении и активной вкладке */
+.gallery .block-title-filters .filters button:hover,
+.gallery .block-title-filters .filters button.checked{
+	background-color: #f5c149;
+	cursor: pointer;
+}
+
+/* Блок с картинками галереи */
+.gallery .images{
+	text-align: center;
+	margin-top: 47px;	
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/* Картинка в галерее */
+.gallery .images a{
+	width: 23.63%;
+	height: 250px;
+	border-radius: 4px;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+	background-color: #eee;
+	box-sizing: border-box;
+	background-size: cover;
+}
+
+/* Название под картинкой */
+.gallery .images a .title{
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: inline-block;
+	content: attr(title);
+	background-color: #eee;
+
+	/*Стиль текста*/
+	color: #727272;
+	text-transform: uppercase;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+/* Треугольник блока названия */
+.gallery .images a::before{
+	content: "";
+	position: absolute;
+	border: 19px solid transparent;
+	border-bottom: 19px solid #eee;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: 20%;
+	display: inline-block;
+	z-index: 2;
+}
+
+/* Блок-эффект, который появляется при наведении на картинку */
+.gallery .images a::after{
+	width: 100%;
+	height: 80%;
+	content: "";
+	background-color: rgba(61, 77, 41, 0.7);
+	display: inline-block;
+	transition: opacity .8s;
+	background-image: url("../img/gallery_image_hover_bg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.gallery .images a:hover::after{
+	opacity: 1;
+}
+
+/* Конец стилей галереи */
+
+
+
+/* Общие стили ================================================================================================== */
+body{
+	font-family: "Lato";
+	font-size: 14px;
+	font-weight: 400;
+	color: #fff;
+}
+
+body > *{
+	margin: 0 auto;
+}
+
+/* Увеличение кнопок при наведении */
+input[type=submit]:hover,
+.block-about .block-cards > div > .socmedia > a:hover{
+	transform: scale(1.06);
+}
+
+/* Обертка блоков */
+.wrapper{
+	width: 1600px;
+	padding: 0 250px;
+	box-sizing: border-box;
+}
+/* Обертка блоков без учета блока теста */
+.wrapper:not(.wrapper-main-text):not(.wrapper-footer){
+	padding-top: 195px;
+	padding-bottom: 100px;
+}
+
+/* Абзацы */
+.article > p{
+	line-height: 24px;
+	margin-top: 20px;
+}
+
+/* Блок с текстом */
+.article{
+	text-align: center;
+}
+
+/*Навигационная панель и логотип --------------------------------------------------------------------------------- */
+.header{
+	width: 1600px;
+	height: 72px;
+	position: fixed;
+	top: 0;
+	padding: 0 250px;
+	z-index: 1000;
+	box-sizing: border-box;
+	transition: .6s;
+}
+
+/* Класс для добавления прозрачности фону */
+.opacity-7{
+	background-color: rgba(0, 0, 0, .7) !important;
+}
+
+/* Обертка */
+.header-wrapper{
+	position: relative;
+}
+
+/* Блок логотипа */
+.logo{
+	margin-top: 20px;
+	float: left;
+}
+/* Текст логотипа */
+.logo h2{
+	font-family: 'Damion';
+	font-size: 50px;
+	line-height: 0.8;
+}
+
+/* Кнопка отображения навигационной панели на мобильных устройствах */
+.mobile-menu-btn{
+	width: 25px;
+	height: 25px;
+	background-image: url("../img/mobile-menu-btn.png");
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 20px;
+	display: none;
+}
+
+/* Класс avtive для замены картинки */
+.mobile-menu-btn.active{
+	filter: invert(100%);
+}
+
+/* Блок навигационной панели */
+.navbar{
+	float: right;
+}
+
+/* Элемент навигационной панели */
+.navbar li{
+	float: left;
+	text-align: center;
+}
+.navbar li a{
+	display: inline-block;
+	font-size: 18px;
+	width: 100px;
+	height: 31px;
+	margin-left: 2px;
+	padding-top: 41px;
+	border-radius: 0 0 5px 5px;
+	transition: 0.5s;
+}
+
+/* Активный элемент навигационной панели */
+.navbar li a.active{
+	background-color: #74c7d5;
+	border-radius: 0 0 5px 5px;
+}
+
+/* Элемент навигационной панели при наведении */
+.navbar li a:hover{
+	background-color: #74c7d5;
+	border-radius: 0 0 5px 5px;
+	padding-top: 50px;
+}
+
+/* Стили навигационной панели в зависимости от класса (блока, в котором находится экран. Работает через jQuery) */
+/* Home ---------------------------------------------------------------------------------------------------------*/
+/* Цвет фона панели */
+.header.home{
+	background-color: #75b4aa;
+}
+/* Цвет активной и выбираемой вкладки */
+.header.home .navbar li a.active,
+.header.home .navbar li a:hover{
+	background-color: #82c8bd;
+}
+
+/* Services ---------------------------------------------------------------------------------------------------------*/
+/* Цвет фона панели */
+.header.services{
+	background-color: #b24a50;
+}
+/* Цвет активной и выбираемой вкладки */
+.header.services .navbar li a.active,
+.header.services .navbar li a:hover{
+	background-color: #df5c64;
+}
+
+/* About ---------------------------------------------------------------------------------------------------------*/
+/* Цвет фона панели */
+.header.about{
+	background-color: #665464;
+}
+/* Цвет активной и выбираемой вкладки */
+.header.about .navbar li a.active,
+.header.about .navbar li a:hover{
+	background-color: #91778e;
+}
+
+/* Work ---------------------------------------------------------------------------------------------------------*/
+/* Цвет фона панели */
+.header.work{
+	background-color: #81a256;
+}
+/* Цвет активной и выбираемой вкладки */
+.header.work .navbar li a.active,
+.header.work .navbar li a:hover{
+	background-color: #a1ca6c;
+}
+
+/* Contacts ---------------------------------------------------------------------------------------------------------*/
+/* Цвет фона панели */
+.header.contacts{
+	background-color: #75b4aa;
+}
+/* Цвет активной и выбираемой вкладки */
+.header.contacts .navbar li a.active,
+.header.contacts .navbar li a:hover{
+	background-color: #82c8bd;
+}
+/* Конец стилей навигационной панели и логотипа ------------------------------------*/
+
+/* Стили для полей формы */
+form input[type=text],
+form textarea{
+	background-color: #68a097;
+	border-radius: 5px;
+	padding: 14px 19px;
+	font-size: 16px;
+	color: #fff;
+	box-sizing: border-box;
+	transition: .3s;
+}
+
+/* Конец общих стилей */
+
+
+
+/* Раздел home ================================================================================================== */
+/* Блок текста посредине */
+.main-text{
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #74c7d5;
+	padding: 34px 62px 34px 38px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Левая колонка блока текста посредине */
+.left-col{
+	float: left;
+	margin-right: 10px;
+}
+
+/* Текст левой колонки блока текста посредине */
+.left-col h3{
+	font-family: Lato;
+	font-size: 60px;
+	font-weight: 300;
+	line-height: 58px;
+	line-height: 0.92;
+}
+
+/* Верхняя строка левой колонки блока текста посредине*/
+.left-col h3 > span.top-line{
+	text-transform: uppercase;
+	float: right;
+	white-space: nowrap;
+}
+
+/* Нижняя строка левой колонки блока текста посредине*/
+.left-col h3 > span.bottom-line{
+	float: right;
+}
+
+/* Правая колонка блока текста посредине*/
+.right-col{
+	float: right;
+}
+
+/* Текст правой колонки блока текста посредине*/
+.right-col h3{
+	font-family: "Lato";
+	font-size: 138px;
+	font-weight: 900;
+	line-height: 0.8;
+	text-transform: uppercase;
+}
+/*Конец блока home*/
+
+
+
+/*Блок services =============================================================================================== */
+/* Обертка блока services */
+.block-services.wrapper{
+	background-image: url("../img/services_background.jpg");
+	background-color: #b24a50;
+}
+
+/* Текст заголовка */
+.article h3{
+	font-size: 60px;
+	font-weight: 300;
+	line-height: 0.85;
+	text-transform: uppercase;
+}
+
+/* Текст подзаголовка */
+.article h5{
+	font-size: 20px;
+	line-height: 32px;
+	text-transform: uppercase;
+	margin-top: 38px;
+}
+/* Выделенное слово в подзаголовке */
+.article h5 > span{
+	color: #ec9da2;
+}
+
+/* Цвет абзаца*/
+.block-services .article p{
+	color: #ffcccf;
+}
+
+/* Блок с карточками */
+.block-services .block-cards{
+	margin-top: 110px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Карточки */
+.block-services .block-cards > div{
+	width: 23.6%;
+	padding: 0 2.27%;
+	height: 400px;
+	background-color: rgba(196, 81, 88, 0.8);
+	border-radius: 9px;
+	background-position: center 45px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+/* Заголовки карточек */
+.block-services .block-cards > div > h5{
+	margin-top: 212px;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+/* Текст карточек */
+.block-services .block-cards > div > p{
+	margin-top: 42px;
+	line-height: 20px;
+}
+
+/* Картинки карточек */
+.block-services .block-cards div.card-1{ background-image: url("../img/services_card-1.png"); }
+.block-services .block-cards div.card-2{ background-image: url("../img/services_card-2.png"); }
+.block-services .block-cards div.card-3{ background-image: url("../img/services_card-3.png"); }
+.block-services .block-cards div.card-4{ background-image: url("../img/services_card-4.png"); }
+
+/* Конец блока services */
+
+
+
+/*Блок about ====================================================================================================== */
+/* Обертка блока about*/
+.block-about.wrapper{
+	background-image: url("../img/about_background.jpg");
+	background-color: #665464;
+}
+
+/* Текст блока */
+.block-about .article > p{
+	margin-top: 32px;
+}
+
+/* Блок заголовка-выноски Meet the team*/
+.meet-the-team-block{
+	position: relative;	
+	background-color: #a1ca6c;
+	width: 276px;
+	margin: 0 auto;
+	padding: 16px 0;
+	margin-top: 54px;
+	border-radius: 5px;
+	white-space: nowrap;
+	text-align: center;
+}
+/*Нижний треугольник выноски*/
+.meet-the-team-block:after{
+	position: absolute;
+	left: 49%;
+	bottom: -3px;
+	display: block;
+	content: "";
+	width: 21px;
+	height: 21px;
+	background-color: #a1ca6c;
+	transform: rotate(45deg) translateY(50%);
+}
+
+/* Текст выноски */
+.meet-the-team-block p{
+	font-weight: 900;
+	font-size: 25px;
+	line-height: 0.85;
+	text-transform: uppercase;
+}
+
+/* Блок с карточками */
+.block-about .block-cards{
+	margin-top: 70px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Карточки */
+.block-about .block-cards > div{
+	width: 23.64%;
+	padding: 0 2.72%;
+	height: 380px;
+	background-color: rgba(77, 63, 75, 0.5);
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/* Картинка профиля в карточке */
+.block-about .block-cards > div > .profile-image{
+	display: inline-block;
+	position: relative;
+	width: 166px;
+	height: 166px;
+	margin-top: 44px;
+	box-sizing: border-box;
+	border: 5px solid #a1859e;
+	border-radius: 83px;
+	background-position: center 12px;
+	background-color: #fff;
+	transition: 0.5s;
+}
+.block-about .block-cards > .card-1 > .profile-image{ background-image: url("../img/about_cards_profile-image-1.jpg"); }
+.block-about .block-cards > .card-2 > .profile-image{ background-image: url("../img/about_cards_profile-image-2.jpg"); }
+.block-about .block-cards > .card-3 > .profile-image{ background-image: url("../img/about_cards_profile-image-3.jpg"); }
+.block-about .block-cards > .card-4 > .profile-image{ background-image: url("../img/about_cards_profile-image-4.jpg"); }
+
+/* Имя в карточке */
+.block-about .block-cards > div > .name{
+	color: #c7b6c5;
+	font-size: 25px;
+	font-weight: 900;
+	line-height: 0.85;
+	text-transform: uppercase;
+	margin-top: 24px;
+	transition: 0.5s;
+	white-space: nowrap;
+}
+
+/* Должность в карточке */
+.block-about .block-cards > div > .position{
+	color: #a1ca6c;
+	line-height: 0.85;
+	margin-top: 12px;
+	transition: 0.5s;
+}
+
+/* Блок соцмедиа в карточке */
+.block-about .block-cards > div > .socmedia{
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: 32px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Иконки соцсетей */
+.block-about .block-cards > div > .socmedia > a{
+	width: 31px;
+	height: 31px;
+	background-color: #a1859e;
+	border-radius: 15.5px;
+	background-position: center;
+	transition: 0.5s;
+	margin-right: 19px;
+}
+/* Отступ последней иконки */
+.block-about .block-cards > div > .socmedia > a:last-of-type{
+	margin-right: 0;
+}
+
+/* Картинки иконок соцсетей */
+.block-about .block-cards > div > .socmedia > a.facebook{ background-image: url("../img/socmedia_facebook.png");}
+.block-about .block-cards > div > .socmedia > a.twitter{ background-image: url("../img/socmedia_twitter.png");}
+.block-about .block-cards > div > .socmedia > a.google{ background-image: url("../img/socmedia_google.png");}
+.block-about .block-cards > div > .socmedia > a.instagram{ background-image: url("../img/socmedia_instagram.png");}
+
+/* При наведениее на карточку */
+/* Цвет обводки картинки профиля */
+.block-about .block-cards > div:hover .profile-image{
+	border: 5px solid #df5c64;
+}
+/* Цвет имени */
+.block-about .block-cards > div:hover .name{
+	color: #fff;
+}
+/* Цвет должности */
+.block-about .block-cards > div:hover .position{
+	color: #ff8973;
+}
+
+/* Цвет фона иконок соцсетей при наведении */
+.block-about .block-cards > div:hover > .socmedia > a.facebook{ background-color: #4f689e;  }
+.block-about .block-cards > div:hover > .socmedia > a.twitter{ background-color: #74c7d5; }
+.block-about .block-cards > div:hover > .socmedia > a.google{ background-color: #df5c64; }
+.block-about .block-cards > div:hover > .socmedia > a.instagram{ background-color: #3e61af; }
+
+/* Конец блока about*/
+
+
+
+/* Блок work ===================================================================================================== */
+/* Обертка блока */
+.block-work.wrapper{
+	background-image: url("../img/work_background.jpg");
+	background-color: #81a256;
+}
+
+/* Галерея - стили в начале */
+
+
+/* Конец блока work */
+
+
+/* Блок contacts ================================================================================================= */
+/* Обертка блока*/
+.block-contacts.wrapper{
+	background-image: url("../img/contacts_background.jpg");
+	background-color: #75b4aa;
+	padding-bottom: 80px;
+}
+
+/* Блок контактов */
+.sub-block-contacts{
+	margin-top: 120px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: 	wrap;
+}
+
+/* Столбцы в блоке контактов */
+.sub-block-contacts .col{
+	height: 272px;
+}
+
+/* Левый столбец с контактами */
+.col-contacts{
+	max-width: 220px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+/* Блок с адресом */
+.col-contacts .address-line{
+	width: 100%;
+}
+
+/* Заголовок адреса */
+.col-contacts .address-line .address{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 0.85;
+}
+
+/* Название фирмы */
+.col-contacts .address-line .firm-name{
+	color: #c0dfda;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 0.85;
+	margin-top: 25px;
+}
+
+/* Адрес фирмы */
+.col-contacts .address-line .firm-destination{
+	font-size: 16px;
+	line-height: 21px;
+	margin-top: 17px;
+}
+
+/* Таблица с контактами */
+.col-contacts .contacts-lines table{
+	width: 100%;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+/* Стили для первого столбца */
+.col-contacts .contacts-lines table td.col-1{
+	color: #d0efea;
+	padding-right: 25px;
+}
+
+/* Ссылки в таблице контактов */
+.col-contacts .contacts-lines table td a[href]{
+	text-decoration: underline;
+}
+
+/* Средний столбец с картой */
+.col-map{
+	width: 260px;
+	vertical-align: bottom;
+	position: relative;
+}
+
+/* Карта */
+.col-map .map{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 220px;
+	background-image: url("../img/map.jpg");
+}
+
+/* Правый столбец с формой отправки */
+.col-contact-form{
+	width: 540px;
+	min-height: 353px;
+}
+
+/* Заголовок формы */
+.col-contact-form .title{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 0.85;
+}
+
+/* Форма */
+.col-contact-form .contact-form{
+	text-align: center;
+}
+
+/* Поля формы при фокусе */
+.col-contact-form .first-line input:focus,
+.col-contact-form .second-line textarea:focus{
+	background-color: #fff;
+	color: grey;
+}
+
+/* Первая строка формы (Имя, Имейл) */
+.col-contact-form .first-line{
+	margin-top: 25px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Поля первой строки (Имя, Имейл) */
+.col-contact-form .first-line input{
+	width: 48%;
+	height: 40px;
+}
+
+/* Текстовое поле второй строки */
+.col-contact-form .second-line textarea{
+	width: 100%;
+	height: 160px;
+	margin-top: 19px;
+	resize: none;
+}
+
+/* Кнопка отправить в третьей строке */
+form input[type=submit]{
+	width: 260px;
+	height: 50px;
+	box-shadow: inset 0 -4px 0 rgba(178, 74, 80, 0.5);
+	background-color: #df5c64;
+	box-sizing: border-box;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 26px;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-top: 30px;
+	transition: .5s;
+}
+
+/* Кнопка отправить (при наведении) */
+form input[type=submit]:hover{
+	cursor: pointer;
+}
+
+/* Кнопка отправить (при нажатии) */
+form input[type=submit]:active{
+	height: 46px;
+	box-shadow: none;
+	margin-top: 34px;
+	padding: 0;
+}
+
+/* Футер */
+footer{
+	background-color: #68a097;
+	position: relative;
+	padding: 45px 0;
+}
+
+/* Позиционирование блока иконок в футере */
+footer .soc-icons{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+/* Иконки в футере */
+footer .soc-icons .icon{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-color: #82c8bd;
+	border-radius: 30px;
+	margin-right: 40px;
+	background-position: center;
+	transition: .6s;
+}
+/* Последняя иконка */
+footer .soc-icons .icon:last-of-type{
+	margin-right: 0;
+}
+
+/* Картинки для каждой отдельной иконки */
+footer .soc-icons .icon-facebook{ background-image: url("../img/footer-socmedia-facebook.png"); }
+footer .soc-icons .icon-twitter{ background-image: url("../img/footer-socmedia-twitter.png"); }
+footer .soc-icons .icon-google{ background-image: url("../img/footer-socmedia-google.png"); }
+footer .soc-icons .icon-instagram{ background-image: url("../img/footer-socmedia-instagram.png"); }
+
+/* Цвет фона для каждой иконки соцсетей при наведении */
+footer .soc-icons .icon-facebook:hover{ background-color: #4f689e;  }
+footer .soc-icons .icon-twitter:hover{ background-color: #74c7d5; }
+footer .soc-icons .icon-google:hover{ background-color: #df5c64; }
+footer .soc-icons .icon-instagram:hover{ background-color: #3e61af; }
+
+
+
+/* ============================================================================================================= 
+Медиа-запросы 
+============================================================================================================== */
+
+/* Ширина экрана от 1024px до 1599px -------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) and (max-width: 1599px){
+	/* Стили для всех блоков ------------------------------------------------------- */
+	/* Ширина обертки и header*/
+	.wrapper, .header{
+		width: 100%;
+		padding: 0 8%;
+	}
+	/* Верхние и нижние отступы обертки */
+	.wrapper:not(.wrapper-main-text):not(.wrapper-footer){
+		padding-top: 18vh;
+		padding-bottom: 12vh;
+	}
+	
+
+	/* Блок home ----------------------------------------------------------------- */
+	/* Слайдер */
+	.slider{
+		width: 100%;
+		height: 98.3vh;
+	}
+
+	/* Стрелки слайдера */
+	.slider .slider-arrows .arrow{
+		width: 2.125vw;
+		height: 3.5vw;
+	}
+
+	/* Стрелки слайдера при наведении */
+	.slider .slider-arrows .arrow:hover{
+		width: 2.81vw;	
+		height: 4.75vw;
+	}
+
+	/* Точки слайдера */
+	.slider .slider-dots .dot{
+		width: 1.2vw;
+		height: 1.2vw;
+		border-radius: .6vw;
+	}
+
+	/* Точки слайдера при наведении мыши */
+	.slider .slider-dots .dot:not(.active):hover{
+		width: 1.6vw;
+		height: 1.6vw;
+		border-radius: .8vw;
+	}
+	
+	/* Блок main-text*/
+	.block-home .main-text{
+		padding: 2.125vw 3.875vw 2.125vw 2.375vw;
+	}
+
+	/* Левая колонка текста в блоке main-text */
+	.block-home .main-text .left-col h3{
+		font-size: 3.75vw;
+	}
+	/* Правая колонка текста в блоке main-text */
+	.block-home .main-text .right-col h3{
+		font-size: 8.625vw;
+	}
+
+
+	/* Блок services ----------------------------------------------------------------- */
+	/* Карточка */
+	.block-services .block-cards > div{
+		height: 25vw;
+		background-size: 8.75vw;
+		background-position: center 2.8125vw;
+	}
+	
+	/* Заголовок карточки */
+	.block-services .block-cards > div > h5{
+		font-size: 1.875vw;
+		margin-top: 13.25vw;
+
+	}
+	/* Текст карточки */
+	.block-services .block-cards > div > p{
+		font-size: 0.875vw;
+		margin-top: 2.625vw;
+		line-height: 1.25vw;
+	}
+	
+
+
+	/* Блок about ----------------------------------------------------------------- */
+	/* Имя в карточке */
+	.block-about .block-cards > div > .name{
+		font-size: 1.5625vw;
+	}
+	/* Должность в карточке */
+	.block-about .block-cards > div > .position{
+		font-size: .875vw;
+	}
+	/* Иконки соцсетей в карточке */
+	.block-about .block-cards > div > .socmedia > a{
+		width: 2.4vw;
+		height: 2.4vw;
+	}
+	
+
+	/* Блок about ----------------------------------------------------------------- */
+	/* Размеры картинок галереи */
+	.gallery .images a{
+		height: 15.625vw;
+	}
+
+	/* Блок contacts --------------------------------------------------------------- */
+	/* Меняем размеры и отступы блока контактов */
+	.col-contact-form{
+		width: 420px;
+	}
+
+}
+
+/* Ширина экрана от 1024px до 1279px*/
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+	/* Стили для всех блоков ------------------------------------------------------- */
+	/* Размер заголовков */
+	.article h3{
+		font-size: 54px;
+	}
+	/* Текст под заголовками */
+	.article > p{
+		margin-top: 40px;
+		font-size: 	12px;	
+	}
+
+	/* Блок services --------------------------------------------------------------- */
+	/* Верхний отступ карточек */
+	.block-services .block-cards{
+		margin-top: 90px;	
+	}
+
+	/* Блок about ------------------------------------------------------------------ */
+	/* Карточки с профилями */
+	.block-about .block-cards > div{
+		height: 310px;	
+	}
+
+	/* Картинка профиля в карточке */
+	.block-about .block-cards > div > .profile-image{
+		width: 140px;
+		height: 140px;
+		margin-top: 34px;	
+	}
+	
+	/* Иконки соцмедиа */
+	.block-about .block-cards > div > .socmedia{
+		bottom: 22px;	
+	}
+
+	/* Блок work */
+	.gallery .images a .title{
+		line-height: 32px;
+	}
+
+
+	/* Блок contacts --------------------------------------------------------------- */
+	/* Верхний внутренний отступ блока */
+	.wrapper:not(.wrapper-main-text):not(.wrapper-footer){
+		padding-top: 100px;
+		padding-bottom: 110px;	
+	}
+
+	/* Блок с контактами */
+	.sub-block-contacts{
+		justify-content: space-around;
+	}
+
+	/* Меняем размеры и отступы блока контактов */
+	.col-contact-form{
+		margin-top: 80px;	
+		width: 600px;
+		text-align: center;	
+	}
+
+	/* Футер */
+	footer{
+		height: 100px;	
+	}
+
+	/* Блок иконок в футере */
+	footer .soc-icons{
+		margin-top: 35px;	
+	}
+
+	/* Иконки в футере */
+	footer .soc-icons .icon{
+		width: 40px;	
+		height: 40px;	
+		background-size: 50%;
+	}
+}
+
+/* Ширина экрана до 1023px -------------------------------------------------------------------------- */
+@media (max-width: 1023px){
+	/* Стили для всех блоков ------------------------------------------------------- */
+	/* Ширина обертки*/
+	.wrapper{
+		width: 100%;
+		padding: 0 30px;
+	}
+	/* Верхние и нижние отступы обертки */
+	.wrapper:not(.wrapper-main-text):not(.wrapper-footer){
+		padding-top: 120px;
+		padding-bottom: 70px;
+	}
+
+
+	/* Блок home ------------------------------------------------- */
+	/* Слайдер */
+	.slider{
+		width: 100%;
+		height: 70vh;
+	}
+
+	/* Блок точек слайдера */
+	.slider .slider-dots{
+		bottom: 25px;
+	}
+	
+	/* Хедер */
+	.header{
+		width: 100%;
+		padding: 0 30px;
+	}
+
+	/* Дополнительное разрешение */
+	@media (max-width: 765px){
+		/* Хедер */
+		.header{
+			padding: 0px;
+			background-color: #75b4aa;
+			height: auto;
+		}
+
+		/* Лого в хедере */
+		.header .logo{
+			text-align: center;
+			float: none;
+			margin-top: 10px;
+		}
+		.header .logo > h2{
+			font-size: 40px;
+		}
+
+		/* Навбар в хедере */
+		.header .navbar{
+			float: none;
+			margin-top: 10px;
+			transform: translateX(-50%);
+			margin-left: 50%;
+			display: inline-block;
+		}
+		.header .navbar ul{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			padding: 0;
+		}
+
+		/* Вкладки навбара */
+		.header .navbar li > a{
+			font-size: 14px;
+			width: 70px;
+			height: 25px;
+			margin-left: 5px;
+			padding-top: 15px;
+		}
+	}
+	
+
+	/* Блок main-text*/
+	.block-home .main-text{
+		padding: 10px;
+	}
+
+	/* Левая колонка текста в блоке main-text */
+	.block-home .main-text .left-col h3{
+		font-size: 30px;
+	}
+	/* Правая колонка текста в блоке main-text */
+	.block-home .main-text .right-col h3{
+		font-size: 70px;
+	}
+	
+
+	/* Блок services -------------------------------------------------------- */
+	/* Блок с карточками */
+	.block-services .block-cards{
+		justify-content: space-around;
+	}
+
+	/* Карточки */
+	.block-services .block-cards > div{
+		width: 260px;
+		height: 400px;
+		margin-bottom: 30px;
+	}
+	/* Дополнительные разрешения для карточек */
+	@media (min-width: 830px){
+		.block-services .block-cards > div{
+			width: 300px;
+		}
+	}
+	@media (min-width: 950px){
+		.block-services .block-cards > div{
+			width: 210px;
+			height: 410px;
+		}
+		/* Заголовки карточек */
+		.block-services .block-cards > div > h5{
+			font-size: 24px;
+		}
+	}
+
+
+	/* Блок about -------------------------------------------------------- */
+	/* Блок с карточками */
+	.block-about .block-cards{
+		justify-content: space-around;
+	}
+	
+	/* Карточки */
+	.block-about .block-cards > div{
+		width: 260px;
+		height: 380px;
+		margin-bottom: 30px;
+	}
+	/* Дополнительное разрешение */
+	@media (min-width: 840px){
+		/* Карточки */
+		.block-about .block-cards > div{
+			width: 34%;
+		}
+	}
+	@media (min-width: 930px){
+		/* Карточки */
+		.block-about .block-cards > div{
+			width: 24%;
+		}
+
+		/* Имя в карточке */
+		.block-about .block-cards > div > .name{
+			font-size: 21px;
+		}
+
+		/* Иконки соцсетей */
+		.block-about .block-cards > div > .socmedia > a{
+			margin-right: 12px;
+		}
+	}
+
+
+	/* Блок work -------------------------------------------------------- */
+	/* Галерея - блок заголовка и вкладок */
+	.gallery .block-title-filters{
+		padding: 15px 0;
+		text-align: center;
+		display: block;
+	}
+	/* Заголовок */
+	.gallery .block-title-filters > h4{
+		font-size: 30px !important;
+	}
+	/* Блок вкладок */
+	.gallery .block-title-filters .filters{
+		margin-top: 20px;
+	}
+	
+	/* Блок картинок галереи */
+	.gallery .images{
+		justify-content: space-around;
+	}
+
+
+	/* Картинки галереи */
+	.gallery .images a{
+		width: 260px;
+	}
+
+
+	/* Блок contacts -------------------------------------------------------- */
+	/* Подблок с контактами */
+	.sub-block-contacts{
+		justify-content: space-around;
+	}
+
+	/* Форма отправки сообщения */
+	.col-contact-form{
+		margin-top: 50px;
+		text-align: center;
+	}
+}
+
+
+/* Ширина экрана до 599px -------------------------------------------------------------------------- */
+@media (max-width: 599px){
+	/* Блок хедер ================================================================================================= */
+	/* Лого в хедере */
+	.header .logo{
+		margin: 10px 0;
+	}
+
+	/* Включаем кнопку для отображения меню на мобильных устройствах */
+	.mobile-menu-btn{
+		display: block;
+	}
+
+	/* Навигационное меню */
+	.header .navbar{
+		display: none;
+		position: absolute;
+		background-color: rgba(0, 0, 0, .7);
+		width: 100%;
+		margin-top: 0;
+		padding-top: 15px;
+	}
+
+	/* Убираем флекс для элементов navbar */
+	.header .navbar ul{
+		display: block;
+	}
+
+	/* Вкладки навбара */
+	.header .navbar li{
+		float: none;
+		display: block;
+		width: 100%;
+	}
+
+	/* Стили ссылок */
+	.header .navbar li > a{
+		width: 100%;
+		font-size: 18px;
+		margin: 0;
+		margin-bottom: 12px;
+		padding: 12px 0;
+	}
+
+	.header .navbar li a.active, .header .navbar li a:hover{
+		background-color: transparent !important;
+	}
+
+
+	/* Стили слайдера ================================================================================================*/
+	/* Скрываем управляющие стрелки слайдера */
+	.slider .slider-arrows{
+		display: none;
+	}
+
+	
+	/* Блок services ============================================================================================== */
+	/* Карточки */
+	.block-services .block-cards > div{
+		width: 290px;
+	}
+
+
+	/* Блок about ================================================================================================= */
+	/* Карточки */
+	.block-about .block-cards > div{
+		width: 290px;
+		height: 400px;
+	}
+
+
+	/* Блок contacts ================================================================================================= */
+	/* Правый столбец с формой отправки */
+	.col-contact-form{
+		width: 100%;
+	}
+
+
+	/* footer ================================================================================================= */
+	/* Иконки в футере */
+	footer .soc-icons .icon{
+		width: 50px;
+		height: 50px;
+		background-size: 50%;
+		margin-right: 25px;
+	}
+}
+
+
+@media (max-width: 450px){
+	/* Раздел home ================================================================================================== */
+	/* Блок main-text*/
+	.block-home .main-text{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	/* Левая колонка блока текста посредине */
+	.left-col{
+		text-align: center;
+		float: none;
+		margin-bottom: 15px;
+		margin-right: 0;
+		text-align: center;
+	}
+	.left-col h3 > span.top-line,
+	.left-col h3 > span.bottom-line{
+		float: none;
+	}
+
+
+	/*Блок services =============================================================================================== */
+	/* Текст заголовка */
+	.article h3{
+		font-size: 40px;
+	}
+
+	
+	/* Галерея ======================================================================================================== */
+	/* Кнопки вкладок */
+	.gallery .block-title-filters .filters button{
+		margin-bottom: 10px;
+	}
+
+
+	/* Блок contacts ================================================================================================= */
+	/* Блок контактов */
+	.sub-block-contacts{
+		margin-top: 80px;
+	}
+
+	/* Первая строка формы (Имя, Имейл) */
+	.col-contact-form .first-line{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	/* Поля первой строки (Имя, Имейл) */
+	.col-contact-form .first-line input{
+		width: 100%;
+	}
+	/* Поле name */
+	.col-contact-form .first-line input[name=name]{
+		margin-bottom: 19px;
+	}
+}
+
+
+@media (max-width: 350px){
+	/* Стили для всех блоков ------------------------------------------------------- */
+	/* Ширина обертки*/
+	.wrapper{
+		padding: 0 15px;
+	}
+}
+
+
+/* Ширина экрана от 320px до 414px -------------------------------------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 414px){
+	/* Стили для всех блоков ------------------------------------------------------- */
+	/* Ширина обертки*/
+	/*.wrapper{
+		width: 100%;
+		padding: 0 30px;
+	}*/
+	/* Верхние и нижние отступы обертки */
+	/*.wrapper:not(.wrapper-main-text):not(.wrapper-footer){
+		padding-top: 120px;
+		padding-bottom: 70px;
+	}*/
+
+
+	/* Блок home ------------------------------------------------- */
+	/* Слайдер */
+	/*.slider{
+		width: 100%;
+		height: 70vh;
+	}*/
+
+	/* Блок точек слайдера */
+	/*.slider .slider-dots{
+		bottom: 25px;
+	}*/
+
+	/* Хедер */
+	/*.header{
+		width: 100%;
+		padding: 0px;
+		background-color: #75b4aa;
+		height: auto;
+	}*/
+
+	/* Лого в хедере */
+	/*.header .logo{
+		text-align: center;
+		float: none;
+		margin: 9px 40px 14px 0;
+	}
+	.header .logo > h2{
+		font-size: 40px;
+	}*/
+
+	/* Кнопка отображения меню */
+	/*.mobile-menu-btn{
+		display: block;
+		right: 15px;
+	}*/
+
+	/* Навбар в хедере */
+	/*.header .navbar{
+		display: none;
+
+		float: none;
+		margin-top: 10px;
+		margin-left: 110px;
+		transform: translateX(-50%);
+		margin-left: 50%;
+		display: inline-block;
+	}*/
+	.header .navbar ul{
+		/*display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		padding: 0;
+	}
+	.header .navbar ul:before, .header .navbar ul:after{
+		/*content: "";
+		display: block;
+		clear: both;*/
+	}
+
+	/* Блок main-text*/
+	/*.block-home .main-text{
+		padding: 10px;
+	}*/
+
+	/* Левая колонка текста в блоке main-text */
+	/*.block-home .main-text .left-col h3{
+		font-size: 30px;
+	}*/
+	/* Правая колонка текста в блоке main-text */
+	/*.block-home .main-text .right-col h3{
+		font-size: 70px;
+	}*/
+	
+
+	/* Блок services -------------------------------------------------------- */
+	/* Блок с карточками */
+	/*.block-services .block-cards{
+		justify-content: space-around;
+	}*/
+
+	/*.block-services .block-cards > div{*/
+		/*margin-left: 5%;
+		margin-right: 5%;*/
+	/*}*/
+
+	/* Карточки */
+	/*.block-services .block-cards > div{
+		width: 260px;
+		height: 400px;
+		margin-bottom: 30px;
+	}*/
+
+
+	/* Блок about -------------------------------------------------------- */
+	/* Блок с карточками */
+	/*.block-about .block-cards{
+		justify-content: space-around;
+	}*/
+
+	/* Карточки */
+	/*.block-about .block-cards > div{
+		width: 260px;
+		height: 380px;
+		margin-bottom: 30px;
+	}*/
+
+
+	/* Блок work -------------------------------------------------------- */
+	/* Галерея - блок заголовка и вкладок */
+	/*.gallery .block-title-filters{
+		padding: 15px 0;
+		text-align: center;
+		display: block;
+	}*/
+	/* Заголовок */
+	/*.gallery .block-title-filters > h4{
+		font-size: 30px !important;
+	}*/
+	/* Блок вкладок */
+	/*.gallery .block-title-filters .filters{
+		margin-top: 20px;
+	}*/
+	
+	/* Блок картинок галереи */
+	/*.gallery .images{
+		justify-content: space-around;
+	}*/
+
+
+	/* Картинки галереи */
+	/*.gallery .images a{
+		width: 260px;
+	}*/
+
+
+	/* Блок contacts -------------------------------------------------------- */
+	/* Подблок с контактами */
+	/*.sub-block-contacts{
+		justify-content: space-around;
+	}*/
+
+	/* Форма отправки сообщения */
+	/*.col-contact-form{
+		margin-top: 50px;
+		text-align: center;
+	}*/
+
+	/* Футер */
+	/*footer{
+		height: 100px;
+	}*/
+
+	/* Блок иконок в футере */
+	/*footer .soc-icons{
+		width: 375px;
+		position: absolute;
+		margin: 0;
+		left: 50%;
+		top: 20px;
+	}*/
+}
