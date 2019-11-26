@@ -1,0 +1,1502 @@
+/* ===========================================================================================
+Шрифты
+=========================================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito|Open+Sans:300,400,600,700&display=swap');
+
+
+
+/* ===========================================================================================
+Общие стили для всех блоков
+=========================================================================================== */
+*{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: .9;
+}
+
+/* Контейнер для содержимого блока */
+.container{
+	width: 100%;
+	max-width: 1028px;
+	margin: 0 auto;
+}
+
+/* Анимация увеличения для кнопок и ссылок */
+button, a{
+	transition: .3s;
+}
+button:hover,
+a:not(.tab):hover{
+	transform: scale(1.07);
+	/* Чтобы текст не размывался при увеличении */
+	backface-visibility: hidden;
+}
+
+
+
+
+/* ===========================================================================================
+Стили сайта
+=========================================================================================== */
+
+/* Блок шапка ----------------------------------------------------------------------------------------------------------- */
+.block-header{
+	padding-bottom: 22px;
+	position: fixed;
+	background-color: #fff;
+	z-index: 100;
+	width: 100%;
+	height: 85px;
+}
+/* clearfix */
+.block-header .container:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/* Лого */
+.logo{
+	min-width: 150px;
+	height: 36px;
+	background-image: url("../img/logo-bg.png");
+	background-position: left center;
+	background-size: contain;
+	padding-top: 8px;
+	padding-left: 43px;
+	margin-top: 21px;
+	text-transform: uppercase;
+	color: #6d6e70;
+	font-family: Nunito;
+	font-size: 31px;
+	float: left;
+}
+/* Стиль "me" */
+.logo span{
+	color: #595959;
+}
+
+
+/* Скрываем кнопку мобильного меню и заголовок меню  */
+button.menu-btn,
+.navbar > .mobile-menu-title{
+	display: none;
+}
+
+/* Кнопка включения мобильного меню */
+button.menu-btn{
+	display: none;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 25px;
+	background-image: url("../img/mobile-menu-btn.png");
+	background-color: transparent;
+}
+
+/* Класс для отображения меню на телефонах */
+.header-navbar-mobile{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(124, 124, 124, .97);
+	transition: .5s;
+}
+/* Заголовок мобильного меню */
+.header-navbar-mobile > .mobile-menu-title{
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	margin: 25px 0;
+}
+
+/* Ссылки меню */
+.header-navbar-mobile > a{
+	display: block;
+	margin: 10px 15px;
+	padding: 15px;
+	font-size: 18px;
+	border-bottom: 1px solid black;
+	border-radius: 15px;
+}
+/* Ссылки меню при нажатии */
+.header-navbar-mobile > a:active{
+	border-bottom: 1px solid transparent;
+	transform: translateY(1px);
+}
+
+
+
+/* Навигационная панель (для ПК версии) */
+.header-navbar-pc{
+	float: right;
+	margin-top: 40px;
+	margin-right: 110px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+.header-navbar-pc:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Элементы навигационной панели */
+.header-navbar-pc > a{
+	color: rgba(101, 101, 101, .67);
+	font-size: 12.99px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-right: 22px;
+	white-space: nowrap;
+}
+/* Убираем отступ последего элемента */
+.header-navbar-pc > a:last-of-type{
+	margin-right: 0;
+}
+
+/* Кнопка "логин" */
+button.login-btn{
+	text-align: center;
+	background-color: rgba(153, 204, 51, .81);
+	padding: 0 30px;
+	margin-top: 26px;
+	height: 37px;
+	border-radius: 18.5px;
+	cursor: pointer;
+	transition: .2s;
+
+	color: rgba(255, 255, 255, .81);
+	font-family: "Open Sans";
+	font-size: 12.9px;
+	font-weight: 600;
+	line-height: 37px;
+	text-transform: uppercase;
+	line-height: 37px;
+	float: right;
+}
+
+
+/* Блок слайдера ---------------------------------------------------------------------------------------------------------- */
+/* Блоки .slider, .slider-wrapper, .slider-content необходимы для того, чтобы высота блока слайдера была пропорциональна
+его ширине */
+.slider{
+    width: 100%;
+    max-width: 1299.99px;
+    margin: 0 auto;
+    padding-top: 85px;
+}
+
+/* Обертка блока слайдера */
+.slider-wrapper{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 43.88%; /* пропорции блока */
+}
+
+/* Контент блока слайдера */
+.slider-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Блок слайдов */
+.slider .slideswrapper{
+	width: 100%;
+	height: 100%;
+}
+/* Слайды */
+.slider .slideswrapper > div{
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 0 1000px rgba(66, 89, 72, .29); 
+}
+
+/* Контейнер в блоке слайдера */
+.slider .container{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	left: 50%;
+	text-align: center;
+}
+
+/* Обертка блока контейнера - для того, чтобы элементы позиционировались относительно данной обертки */
+.slider .container .container-wrapper{
+	position: relative;
+}
+
+/* Позиционирование контейнера со стрелками слайдера */
+.slider .slider-arrows{
+	position: absolute;
+	right: 0;
+	bottom: 48px;
+} 
+
+/* Стили стрелок слайдера */
+.slider .slider-arrows .arrow{
+	display: inline-block;
+	width: 12.99px;
+	height: 20px;
+	transition: .25s;
+	cursor: pointer;
+}
+/* Левая стрелка слайдера */
+.slider .slider-arrows .arrow-left{
+	background-image: url("../img/slider/slider-arrow-left.png");
+	margin-right: 32px;
+}
+/* 
+Правая стрелка слайдера */
+.slider .slider-arrows .arrow-right{
+	background-image: url("../img/slider/slider-arrow-right.png");
+}
+/* Размер стрелки слайдера при наведении */
+.slider .slider-arrows .arrow:hover{
+	transform: scale(1.25);
+}
+
+/* Блок текста с кнопкой в слайдере */
+.slider .container .main-text{
+	margin-top: 15%;
+	color: #fff;
+}
+/* Текст в блоке слайдера */
+.slider .container .main-text > h2{
+	font-size: 49px;
+	line-height: 77px;
+	font-weight: 600;
+}
+/* Размер шрифта выделенного слова в блоке с текстом */
+.slider .container .main-text > h2 > span.smaller-font-size{
+	font-size: 30px;
+	font-weight: 400;
+	display: block;
+	margin-top: 1.5%;
+}
+
+/* Кнопка become a member */
+.slider .container .main-text button{
+	background-color: #99c50a;
+	padding: 29px 40px;
+	border-radius: 10px;
+	margin-top: 4.87%;
+	
+	color: #fff;
+	font-size: 19px;
+	font-weight: 600;
+}
+
+
+/* Блок how it works -------------------------------------------------------------------------------------------------------- */
+.block-how-it-works{
+	background-image: url("../img/how-it-works-bg.png");
+	background-size: auto;
+	background-position: center 99px;
+	padding-top: 205px;
+}
+
+/* Заголовок блока */
+.block-how-it-works h3.how-it-works-title{
+	color: #515151;
+	font-size: 31px;
+	font-weight: 600;
+	line-height: 50px;
+	text-transform: uppercase;
+	text-align: center;
+	max-width: 550px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Параграфы в блоке */
+.block-how-it-works p.paragraph{
+	color: rgba(81, 81, 81, .71);
+	font-size: 19px;
+	text-align: center;
+	margin-top: 54px;
+	text-align: center;
+	line-height: 34px;
+}
+.block-how-it-works p.paragraph.second{
+	margin-top: 34px;
+}
+
+/* Блок how it works, steps с вкладками */
+.how-it-works-steps{
+	margin-top: 142px;
+	padding: 0 24px;
+}
+
+/* Панель переключателей блока вкладок */
+.how-it-works-steps #tabs .tabs-header{
+	width: 100%;
+	height: 80px;
+}
+
+/* Переключатели вкладок */
+.how-it-works-steps #tabs .tabs-header .tab{
+	height: 80px;
+	float: left;
+	color: #656565;
+	font-size: 33px;
+	font-weight: 300;
+	border-bottom: 1px solid rgba(149, 149, 149, .23); 
+	position: relative;
+	line-height: 45px;
+	transition: .3s;
+}
+.how-it-works-steps #tabs .tabs-header .tab:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 43px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #fff;
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	background-color: #5f5f5f;
+	transition: .3s;
+}
+/* Стили переключателя каждой отдельной вкладки */
+.how-it-works-steps #tabs .tabs-header .tab-1{
+	width: 20.51%;
+	padding-left: 7.653%;
+}
+.how-it-works-steps #tabs .tabs-header .tab-1:before{
+	content: "1";
+}
+.how-it-works-steps #tabs .tabs-header .tab-2{
+	width: 39.745%;
+	padding-left: 19.18%;
+}
+.how-it-works-steps #tabs .tabs-header .tab-2:before{
+	content: "2";
+	left: 28.75%;
+}
+.how-it-works-steps #tabs .tabs-header .tab-3{
+	width: 39.745%;
+	padding-left: 17.86%;
+}
+.how-it-works-steps #tabs .tabs-header .tab-3:before{
+	content: "3";
+	left: 28.75%;
+}
+
+/* Стиль активного переключателя вкладки */
+.how-it-works-steps #tabs .tabs-header .ui-tabs-active .tab{
+	border-bottom: 1px solid #add126;
+}
+.how-it-works-steps #tabs .tabs-header .ui-tabs-active .tab:before{
+	background-color: #add126;
+}
+
+/* Стиль вкладок */
+.how-it-works-steps #tabs .tab-window{
+	padding: 62px 20px 100px 305px;
+	background-position: 87px 88px;
+	background-size: auto;
+	transition: .3s;
+}
+
+/* Стиль заголовков во вкладках */
+.how-it-works-steps #tabs .tab-window > h4{
+	color: #add126;
+	font-size: 25px;
+}
+/* Стиль текста во вкладках */
+.how-it-works-steps #tabs .tab-window > p{
+	color: rgba(96, 96, 96, .67);
+	font-size: 17px;
+	line-height: 32px;
+	margin-top: 30px;
+}
+
+
+/* Блок discover a project ------------------------------------------------------------------------------------------------- */
+/* Двойной фон блока */
+.block-properties-buyers{
+	background-image: url("../img/discover-project_bg.jpg");
+}
+
+/* Колонки блока */
+.block-properties-buyers .cols{
+	display: inline-block;
+	width: 49.5%;
+	min-height: 317px;
+	padding: 45px 0 0;
+	position: relative;
+}
+/* Очистка поведения float-ов */
+.block-properties-buyers .container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Заголовки колонок */
+.block-properties-buyers .cols h4{
+	color: #515151;
+	font-family: Montserrat;
+	font-size: 23px;
+}
+
+/* Текст колонок */
+.block-properties-buyers .cols p{
+	color: #515151;
+	font-size: 17px;
+	line-height: 32px;
+	margin-top: 26px;
+}
+
+/* Кнопки колонок */
+.block-properties-buyers .cols button{
+	width: 187px;
+	height: 51px;
+	line-height: 51px;
+	border-radius: 7px;
+
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 600;
+	position: absolute;
+	bottom: 48px;
+}
+
+/* Левая колонка */
+.block-properties-buyers .cols.col-left{
+	padding-left: 17.9%;
+	padding-right: 6.61%;
+	background-image: url("../img/discover-project-left-col-img.png");
+	background-size: auto;
+	background-position: 0 84px;
+}
+/* Кнопка левой колонки */
+.block-properties-buyers .cols.col-left button{
+	background-color: #26a6d1;
+	left: 35.8%;
+}
+
+/* Правая колонка */
+.block-properties-buyers .cols.col-right{
+	padding-left: 24.51%;
+	background-image: url("../img/discover-project-right-col-img.png");
+	background-size: auto;
+	background-position: 76px 95px;
+}
+/* Кнопка правой колонки */
+.block-properties-buyers .cols.col-right button{
+	background-color: #add126;
+	left: 49%;
+}
+
+
+/* Блок projects ------------------------------------------------------------------------------------------------------- */
+.block-projects{
+	padding-top: 85px;
+}
+/* Отступы контейнера */
+.block-projects .container{
+	padding: 0 25px;
+}
+
+/* Очистка float-ов */
+.section-project-title:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/* Левая колонка секции projects title */
+.section-project-title .col-left{
+	width: 71%;
+	float: left;
+}
+
+/* Заголовок секции projects title */
+.section-project-title .col-left h3{
+	color: #515151;
+	font-size: 29px;
+	font-weight: 600;
+}
+
+/* Текст секции projects title */
+.section-project-title .col-left p{
+	color: #8f8f8f;
+	font-size: 17px;
+	line-height: 30px;
+	margin-top: 22px;
+}
+
+/* Правая колонка секции projects title */
+.section-project-title .col-right{
+	float: right;
+}
+
+/* Правая колонка секции projects title */
+.section-project-title .col-right{
+	float: right;
+}
+.section-project-title .col-right:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/* Кнопка правой колонки секции projects title */
+.section-project-title .col-right button{
+	float: right;
+
+	border: 1px solid rgba(81, 81, 81, .42);
+	border-radius: 8px;
+	background-color: transparent;
+	padding: 18px 24px;
+	margin-top: 26px;
+	
+	text-align: center;
+	color: rgba(81, 81, 81, .71);
+	font-size: 15px;
+	font-weight: 600;
+}
+
+/* Секция projects cards */
+.section-projects-cards{
+	margin-top: 60px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/* Карточка секции project cards */
+.section-projects-cards .card{
+	width: 300px;
+	height: 520px;
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.14);
+	background-color: rgba(248, 248, 248, .71);
+	position: relative;
+	overflow: hidden;
+}
+/* Треугольник карточки */
+.section-projects-cards .card:before{
+	width: 33%;
+	height: 9.6%;
+	background-color: #add136;
+	position: absolute;
+	top: -1.6%;
+	left: -11%;
+	transform: rotate(-45deg);
+	padding-top: 26px;
+	
+	content: "New";
+	color: #fff;
+	font-family: Montserrat;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 2;
+	box-sizing: border-box;
+}
+
+/* Картинка карточки */
+.section-projects-cards .card .image{
+	width: 100%;	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Цена в карточке */
+.section-projects-cards .card .price{
+	position: absolute;
+	top: 33.27%;
+	right: 5%;
+	background-color: #26a6d1;
+	border-radius: 5px;
+	padding: 11px 9px;
+
+	color: #ffffff;
+	font-size: 17px;
+	text-align: center;
+}
+.section-projects-cards .card .price > span.weight{
+	font-weight: 700;
+}
+
+/* Отступы контента карточки */
+.section-projects-cards .card .card-content{
+	padding: 85% 8% 48.33%; 
+}
+
+/* Заголовок карточки */
+.section-projects-cards .card .card-title{
+	color: #484848;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+/* Текст карточки */
+.section-projects-cards .card .card-text{
+	margin-top: 10px;
+	color: rgba(72, 72, 72, .79);
+	font-size: 12.6px;
+	line-height: 22px;
+	hyphens: auto;
+}
+
+/* Секция с нижним абсолютно позиционированным контентом */
+.section-projects-cards .card .card-bottom-section{
+	position: absolute;
+	bottom: 5%;
+	left: 8.66%;
+	width: 84.6%;
+	height: 20.38%;
+}
+
+/* Полоска с заполнением в карточке */
+.section-projects-cards .card .card-bottom-section .meter{
+	width: 100%;
+	height: 14px;
+	border-radius: 7px;
+	background-color: #e3e3e3;
+	overflow: hidden;
+	position: relative;
+}
+/* Заполненная часть полоски */
+.section-projects-cards .card .card-bottom-section .meter:before{
+	content: "";
+	display: inline-block;
+	width: 10%;
+	height: 14px;
+	background-color: #add136;
+	position: absolute;
+}
+/* Заполнение полоски второй карточки */
+.section-projects-cards .card.card-2 .card-bottom-section .meter:before{
+	width: 60%;
+}
+
+/* funded, days left */
+.section-projects-cards .card .card-bottom-section .funded,
+.section-projects-cards .card .card-bottom-section .days-left{
+	display: inline-block;
+	margin-top: 20px;
+	width: 49%;
+
+	color: #8d8d8d;
+	font-size: 12.9px;
+	font-weight: 600;
+}
+/* days left */
+.section-projects-cards .card .card-bottom-section .days-left{
+	text-align: right;
+}
+
+/* project details */
+.section-projects-cards .card .card-bottom-section .project-details{
+	display: block;
+	height: 67px;
+	border-top: 1px solid #d6d6d6;
+	margin-top: 17px;
+	padding-top: 24px;
+	padding-right: 30px;
+	position: relative;
+
+	color: rgb(72, 72, 72, .85);
+	font-size: 15px;
+	font-weight: 600;
+	text-align: right;
+}
+/* Треугольник для ссылки */
+.section-projects-cards .card .card-bottom-section .project-details:before{
+	width: 12px;
+	height: 16px;
+	content: "";
+	background-image: url("../img/card-project-details-green-triangle.png");
+	position: absolute;
+	right: 6px;
+	top: 23px;
+}
+
+
+
+/* Блок community ------------------------------------------------------------------------------------------------------- */
+.block-community{
+	max-width: 1300px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 85px;
+	padding-bottom: 155px;
+	background-image: url("../img/community_bg.jpg");
+	text-align: center;
+}
+
+.block-community .container{
+	max-width: 940px;
+}
+
+/* Заголовок блока */
+.block-community .container > h2.title{
+	color: #9ec02d;
+	font-size: 39px;
+	font-weight: 600;
+}
+
+/* Текст блока */
+.block-community .container > p.text{
+	color: #949494;
+	font-size: 19px;
+	line-height: 32px;
+	margin-top: 31px;
+	padding: 0 5px;
+}
+
+/* Секция комментариев */
+.block-community .comments-section{
+	margin-top: 93px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Колонки комментариев */
+.block-community .comments-section .cols{
+	text-align: center;
+}
+
+/* "Облако" комментария */
+.block-community .comments-section .cols .comment{
+	width: 400px;
+	border-radius: 10px;
+	padding: 20px 35px;
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+}
+/* Треугольник в "облаке" комментария */
+.block-community .comments-section .cols .comment:before{
+	content: "";
+	display: inline-block;
+	border: 22px solid transparent;
+	border-top: 22px solid #fff;
+	border-left: 22px solid #fff;
+	position: absolute;
+	bottom: -21px;
+	left: 84px;
+	z-index: -1;
+}
+
+/* Заголовок в "облаке" комментария */
+.block-community .comments-section .cols .comment > .title{
+	color: #9ec02d;
+	font-size: 21px;
+	font-weight: 600;
+}
+
+/* Текст в "облаке" комментария */
+.block-community .comments-section .cols .comment > .text{
+	margin-top: 16px;
+	color: #848484;
+	font-size: 12.9px;
+	line-height: 24px;
+}
+
+/* Секция комментатор */
+.block-community .comments-section .cols .comment > .commentator{
+	width: 200px;
+	height: 70px;
+	position: absolute;
+	left: 50px;
+	bottom: -105px;
+}
+
+/* Фото комментатора */
+.block-community .comments-section .cols .comment > .commentator .photo{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 9px;
+}
+
+/* Имя комментатора */
+.block-community .comments-section .cols .comment > .commentator .name{
+	float: right;
+	margin-top: 22px;
+	margin-left: 18px;
+
+	color: #494949;
+	font-family: Montserrat;
+	font-size: 15px;
+}
+
+
+/* Футер -------------------------------------------------------------------------------------------------------------- */
+footer .sponsors{
+	width: 100%;
+	height: 129px;
+	padding-top: 45px;
+	padding-bottom: 41px;
+	background-size: contain;
+}
+
+footer .copyright{
+	border-top: 1px solid rgba(90, 90, 90, .11);
+	text-align: center;
+	padding: 25px 0;
+
+	color: #848484;
+	font-size: 12.9px;
+}
+
+
+
+/* ===========================================================================================
+Медиа-запросы
+=========================================================================================== */
+
+/* ---------------------------------------------------
+Для разрешения от 1200px
+--------------------------------------------------- */
+
+@media (min-width: 1200px){
+
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения от 992px до 1199px
+--------------------------------------------------- */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	/* Увеличиваем отступы контейнера */
+	.container{
+		padding: 0 40px;
+	}
+
+	/* Отступ вкладок навигации */
+	.header-navbar-pc{
+		margin-right: 40px;
+	}
+
+	/* Увеличиваем отступ стрелок слайдера */
+	.slider .slider-arrows{
+		right: 40px;
+	}
+
+	/* Положение кнопок колонок в блоке discover a project */
+	.block-properties-buyers .cols button{
+		bottom: 8%;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения от 768px до 991px
+--------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 991px){
+	/* Блок header --------------------------------------------------------------------------- */
+	/* Уменьшаем высоту блока header */
+	.block-header{
+		height: 75px;
+	}
+
+	/* Увеличиваем отступы контейнера */
+	.container{
+		padding: 0 40px;
+	}
+
+	/* Уменьшиаем верхний отступ лого в блоке header */
+	.logo{
+		margin-top: 5px;
+	}
+
+	/* Уменьшиаем верхний отступ кнопки логин в блоке header */
+	button.login-btn{
+		margin-top: 8px;
+	}
+
+	/* Меняем отступ вкладок навигации */
+	.header-navbar-pc{
+		margin: 0;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+
+	/* Блок slider --------------------------------------------------------------------------- */
+	/* Уменьшаем верхний внутренний отступ блока слайдера */
+	.slider{
+		padding-top: 75px;
+	}
+
+	/* Увеличиваем отступ стрелок слайдера */
+	.slider .slider-arrows{
+		right: 40px;
+	}
+	
+	/* Уменьшаем верхний отступ текста в слайдере */
+	.slider .container .main-text{
+		margin-top: 10%;
+	}
+
+	/* Уменьшаем заголовок блока slider */
+	.slider .container .main-text > h2{
+		font-size: 35px;
+	}
+
+	/* Уменьшаем размер кнопки become a member */
+	.slider .container .main-text button{
+		font-size: 14px;
+		padding: 15px 20px;
+	}
+	
+
+	/* Блок how it works --------------------------------------------------------------------------- */
+	/* Уменьшаем размеры шрифта заголовков вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab{
+		font-size: 24px;
+	}
+	/* Уменьшаем размеры номеров заголовков вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab::before{
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+		font-size: 14px;
+		top: 9px;
+	}
+
+	
+	/* Блок block-properties-buyers --------------------------------------------------------------------------- */
+	/* Уменьшаем внутренний отступ контейнера блока properties-buyers */
+	.block-properties-buyers > .container{
+		padding: 0 10px;
+	}
+	
+	/* Уменьшаем внутренний отступ левой колонки блока properties-buyers */
+	.block-properties-buyers .cols.col-left{
+		padding-right: 30px;
+		padding-left: 140px;
+	}
+
+	/* Уменьшаем внутренний отступ и положение фона правой колонки блока properties-buyers */
+	.block-properties-buyers .cols.col-right{
+		padding-left: 150px;
+		background-position: 25px 95px;
+	}
+
+	/* Меняем положение кнопок в колонках */
+	.block-properties-buyers .cols.col-left button,
+	.block-properties-buyers .cols.col-right button{
+		transform: translateX(-50%);
+		left: 50%;
+		bottom: 25px;
+	}
+	/* Поведение кнопки при наведении */
+	.block-properties-buyers .cols button:hover{
+		transform: translateX(-50%) scale(1.07);
+	}
+
+	
+	/* Блок projects -------------------------------------------------------------------------------------- */
+	/* Меняем отступы карточек и внутренние отступы секции projects cards */
+	.section-projects-cards{
+		justify-content: space-around;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	/* Меняем нижние отступы карточек секции projects cards */
+	.section-projects-cards .card{
+		margin-bottom: 50px;
+	}
+	.section-projects-cards .card:last-of-type{
+		margin-bottom: 0;
+	}
+
+	/* Блок community -------------------------------------------------------------------------------------- */
+	/* Меняем оступы колонок комментариев */
+	.block-community .comments-section{
+		justify-content: space-around;
+	}
+
+	/* Меняем размеры "облака" комментария */
+	.block-community .comments-section .cols .comment{
+		width: 300px;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения до 767px (планшеты и моб. телефоны)
+--------------------------------------------------- */
+
+@media (max-width: 767px){
+	/* Общие стили ---------------------------------------------------------------------------------------- */
+	.container{
+		padding: 0 40px;
+	}
+
+
+	/* Блок header --------------------------------------------------------------------------- */
+	/* Уменьшаем высоту блока header */
+	.block-header{
+		height: 75px;
+	}
+
+	/* Увеличиваем отступы контейнера */
+	.container{
+		padding: 0 40px;
+	}
+
+	/* Уменьшиаем верхний отступ лого в блоке header */
+	.logo{
+		margin-top: 5px;
+	}
+
+	/* Уменьшиаем верхний отступ кнопки логин в блоке header */
+	button.login-btn{
+		margin-top: 8px;
+	}
+
+	/* Меняем отступ вкладок навигации */
+	.header-navbar-pc{
+		margin: 0;
+		position: absolute;
+		bottom: 8px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+
+	/* Блок slider -------------------------------------------------------------------------------------- */
+	/* Уменьшаем внутренний вехний отступ */
+	.slider{
+		padding-top: 75px;
+	}
+
+	/* Меняем размеры шрифта заголовка */
+	.slider .container .main-text > h2{
+		font-size: 4.5vw;
+		line-height: 35px;
+	}
+	.slider .container .main-text > h2 > span.smaller-font-size{
+		font-size: 4.5vw;
+	}
+
+	/* Меняем размеры кнопки */
+	.slider .container .main-text button{
+		padding: 18px 25px;
+		font-size: 2vw;
+	}
+
+	/* Меняем отступ кнопок слайдера */
+	.slider .slider-arrows{
+		right: 40px;
+	}
+
+
+	/* Блок how it works -------------------------------------------------------------------------------------- */
+	/* Меняем отступы и положение фона блока */
+	.block-how-it-works{
+		padding-top: 120px;
+		background-position: center 50px;
+	}
+
+	/* Убираем внутренние остутупы секции how-it-works-steps */
+	.how-it-works-steps{
+		padding: 0;
+	}
+
+	/* Уменьшаем верхний отступ секции */
+	.how-it-works-steps{
+		margin-top: 100px;
+	}
+
+	/* Меняем высоту блока заголовков */
+	.how-it-works-steps #tabs .tabs-header{
+		height: 55px;
+	}
+
+	/* Уменьшаем размеры шрифта заголовков вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab{
+		height: 55px;
+		font-size: 3.8vw;
+	}
+	/* Уменьшаем размеры номеров заголовков вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab::before{
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+		font-size: 14px;
+		top: 9px;
+	}
+
+	/* Меняем отступы вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab-1{
+		width: 23.5%;
+	}
+	.how-it-works-steps #tabs .tabs-header .tab-2,
+	.how-it-works-steps #tabs .tabs-header .tab-3{
+		width: 38.25%;
+		padding-left: 10.5%;
+	}
+	.how-it-works-steps #tabs .tabs-header .tab-2::before,
+	.how-it-works-steps #tabs .tabs-header .tab-3::before{
+		left: 9%;
+	}
+	
+	/* Меняем отступы во вкладках */
+	.how-it-works-steps #tabs .tab-window{
+	    padding: 90px 20px 50px;
+	    background-position: center 10px;
+	    background-size: 60px 60px;
+	    text-align: center;
+	}
+
+
+	/* Блок property buyers ------------------------------------------------------------------------------ */
+	/* Меняем фон блока */
+	.block-properties-buyers{
+		background-image: linear-gradient(#e2f8ff 50%, #f5f9eb 50%);
+	}
+	
+	/* Меняем размеры, отступы и положение фоновых картинок колонок */
+	.block-properties-buyers .cols.col-left,
+	.block-properties-buyers .cols.col-right{
+		display: block;
+		width: 100%;
+		min-height: 317px;
+		padding: 40px 15px;
+		text-align: center;
+
+		background-size: 20% ;
+		background-position: 10px 180px;
+	}
+
+	/* Увеличиваем шрифт заголовков */
+	.block-properties-buyers .cols > h4{
+		font-size: 4.5vw;
+	}
+
+	/* Меняем размер шрифта текста */
+	.block-properties-buyers .cols > p{
+		font-size: 2.8vw;
+	}
+
+	/* Центрируем кнопки */
+	.block-properties-buyers .cols.col-left > button,
+	.block-properties-buyers .cols.col-right > button{
+		transform: translateX(-50%);
+		left: 50%;
+	}
+	.block-properties-buyers .cols.col-left > button:hover,
+	.block-properties-buyers .cols.col-right > button:hover{
+		transform: translateX(-50%) scale(1.07);
+	}
+
+
+	/* Блок projects -------------------------------------------------------------------------------------- */
+	/* Центрируем заголовки и текст */
+	.block-projects .section-project-title{
+		text-align: center;
+		min-height: 
+	}
+
+	/* Перестраиваем колонки в одну */
+	.section-project-title .col-left,
+	.section-project-title .col-right{
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	/* Центрируем кнопку правой (нижней) колонки */
+	.section-project-title .col-right button{
+		float: none;
+	}
+
+	/* Меняем отступы карточек и внутренние отступы секции projects cards */
+	.section-projects-cards{
+		justify-content: space-around;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	/* Меняем нижние отступы карточек секции projects cards */
+	.section-projects-cards .card{
+		margin-bottom: 50px;
+	}
+	.section-projects-cards .card:last-of-type{
+		margin-bottom: 0;
+	}
+	
+
+	/* Блок community -------------------------------------------------------------------------------------- */
+	.block-community .comments-section{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+		margin-top: 50px;
+	}
+	/* Добавляем верхний отступ второму комментарию */
+	.block-community .comments-section .cols.right-col{
+		margin-top: 120px;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения от 576px до 767px
+--------------------------------------------------- */
+
+@media (min-width: 576px) and (max-width: 767px){
+	
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения до 575px
+--------------------------------------------------- */
+
+@media (max-width: 575px){
+	/* Общие стили -----------------------------------------------------------------------------------------*/
+	.container{
+		padding: 0 15px;
+	}
+
+	/* Блок шапка ------------------------------------------------------------------------------------------ */
+	/* Скрываем кнопку логина и меню навигации */
+	button.login-btn,
+	.header-navbar-pc{
+		display: none;
+	}
+	
+	/* Отображаем кнопку включения мобильного меню и заголовок меню */
+	button.menu-btn,
+	.header-navbar-mobile > .mobile-menu-title{
+		display: block;
+	}
+	
+	/* Уменьшаем высоту header */
+	.block-header{
+		height: 50px;
+	}
+
+	/* Блок slider ------------------------------------------------------------------------------------------- */
+	/* Уменьшаем врехний внутренний отступ слайдера */
+	.slider{
+		padding-top: 50px;
+	}
+
+	/* Уменьшаем отступ заголовков */
+	.slider .container .main-text{
+		margin-top: 6%;
+	}
+
+	/* Меняем размер и отступы кнопки в слайдере */
+	.slider .container .main-text button {
+    	padding: 14px 20px;
+    	font-size: 14px;
+    	margin-top: 7%;
+	}
+
+	/* Скрываем стрелки управления слайдером */
+	.slider .slider-arrows{
+		display: none;
+	}
+
+
+	/* Блок how it works ------------------------------------------------------------------------------------- */
+	/* Меняем отступы заголовков вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab-1{
+		padding-left: 8%;
+	}
+	.how-it-works-steps #tabs .tabs-header .tab-2,
+	.how-it-works-steps #tabs .tabs-header .tab-3{
+		padding-left: 11.5%;
+	}
+
+
+	/* Блок properties, buyers -------------------------------------------------------------------------------- */
+	/* Меняем размер шрифта текста */
+	.block-properties-buyers .cols > h4{
+		font-size: 8vw;
+	}
+	.block-properties-buyers .cols > p{
+		font-size: 4vw;
+		margin-top: 18px;
+	}
+
+
+	/* Блок community ----------------------------------------------------------------------------------------- */
+	/* Меняем размер заголовка */
+	.block-community .container > h2.title{
+		font-size: 30px;
+	}
+
+	/* Увеличиваем отступ секции comments */
+	.block-community .comments-section{
+		margin-top: 80px;
+	}
+
+	/* Меняем ширину "облака" комментария и добавляем обводку для выделения */
+	.block-community .comments-section .cols .comment{
+		width: 100%;
+		border: 1px solid rgba(0, 0, 0, .2);
+	}
+
+
+	/* Футер -------------------------------------------------------------------------------------------------- */
+	/* Уменьшение отступов блока спонсоров */
+	footer .sponsors{
+		height: 60px;
+		padding: 20px 0;
+	}
+
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения до 399px
+--------------------------------------------------- */
+
+@media (max-width: 399px){
+	/* Блок slider -------------------------------------------------------------------------------------- */
+	/* Увеличиваем картинки слайдера */
+	.slider-wrapper{
+		padding-bottom: 53%;
+	}
+	
+	/* Увеличиваем верхний отступ текста слайдера */
+	.slider .container .main-text > h2{
+		margin-top: 8%;
+	}
+
+
+	/* Блок how it works -------------------------------------------------------------------------------------- */
+	/* Уменьшаем размер и верхний отступ фоновой картинки */
+	.block-how-it-works{
+		background-size: 45px;
+		background-position: center 35px;
+		padding-top: 90px;
+	}
+
+	/* Уменьшаем размер заголовка */
+	.block-how-it-works h3.how-it-works-title{
+		font-size: 26px;
+		line-height: 1.28;
+	}
+
+	/* Уменьшаем размер и отступ параграфа */
+	.block-how-it-works p.paragraph{
+		font-size: 16px;
+		margin-top: 45px;
+		line-height: 1.6;
+	}
+
+	/* Уменьшаем размер заголовков вкладок */
+	.how-it-works-steps #tabs .tabs-header .tab::before {
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		top: 11px;
+	}
+	.how-it-works-steps #tabs .tabs-header .tab{
+		height: 45px;
+	}
+	.how-it-works-steps #tabs .tabs-header .tab-1{
+		padding-left: 9%;
+	}
+	.how-it-works-steps #tabs .tabs-header .tab-2,
+	.how-it-works-steps #tabs .tabs-header .tab-3{
+		padding-left: 12.4%;
+	}
+
+	/* Уменьшаем размер параграфа вкладок */
+	.how-it-works-steps #tabs .tab-window > p{
+		font-size: 16px;
+		line-height: 1.6;
+	}
+
+
+	/* Блок properties, buyers ------------------------------------------------------------------------------------ */
+	/* Уменьшаем нижний отступ кнопок become a member */
+	.block-properties-buyers .cols button{
+		bottom: 30px;
+	}
+
+
+	/* Блок projects ------------------------------------------------------------------------------------ */
+	/* Уменьшаем размер карточек */
+	.section-projects-cards .card{
+		width: auto;
+		max-width: 300px;
+	}
+	/* Меняем положение уголка New */
+	.section-projects-cards .card::before{
+		width: 200px;
+		transform: translate(-50%, -50%) rotate(-45deg);
+		top: 14px;
+		left: 14px;
+	}
+
+	/* Меняем положение выноски с ценой */
+	.section-projects-cards .card .price{
+		top: 28%;
+	}
+
+
+	 /* Блок community --------------------------------------------------------------------------------------------- */
+	 /* Меняем размер заголовка */
+	 .block-community .container > h2.title{
+	 	font-size: 28px;
+	 	line-height: 1.4;
+	 }
+}
