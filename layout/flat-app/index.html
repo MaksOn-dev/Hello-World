@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Flat app</title
+>	<!-- Общие стили -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Шрифты -->
+	<!-- Roboto -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i,900&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" >
+
+	
+
+	<!-- Скрипт jquery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Общий скрипт -->
+	<script src="js/main.js"></script>
+
+	<!-- Bootstrap, popper -->
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body class="res-boot">
+	<!-- Блок header --------------------------------------------------------------------------- -->
+	<div class="_block-header container-fluid d-flex flex-column justify-content-between">
+		<!-- Навигационное меню -->
+		<div class="container-fluid fixed-top pb-2 _container-navbar">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg _header-navbar">
+					<div class="col-3 offset-lg-1">
+						<a href="#" class="navbar-brand"><img src="img/logo-icon.png" alt="Logo">Flat App</a>
+					</div>
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-expanded="false">
+						<i class="fas fa-bars"></i>
+					</button>
+					
+					<div class="navbar-collapse collapse" id="navbarHeader">
+						<ul class="navbar-nav ml-auto d-flex align-items-center">
+							<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+							<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+							<li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+							<li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+							<li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+							<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+							<li class="nav-item _block-header__login"><a href="#" class="nav-link">Login</a></li>
+						</ul>
+					</div>
+				</nav>	
+			</div>
+		</div>
+		
+		<!-- Контент хедера -->
+		<div class="container _header-content" id="home">
+			<div class="row align-items-end">
+				<div class="_block-header__section-phone col-11 col-sm-8 col-md-6 col-lg-5 mx-auto order-last order-md-first text-center">
+					<div class="wrap-inner d-flex justify-content-center align-items-end w-100 h-100">
+						<div class="inner">
+							<img src="img/logo-in-phone.png" alt="logo">
+							<p>Flat App</p>
+							<button type="button">Start</button>
+						</div>
+					</div>
+				</div>
+				<div class="_block-header__section-text-new-phone col-md-6 col-12 d-flex align-items-end mx-auto mx-md-0 text-center text-md-left">
+					<div class="inner">
+						<h2>Gummi Bears Marzipan Caramels.</h2>
+						<p>Lollipop liquorice lollipop ice cream cheesecake halvah jelly-o. Gummies lollipop macaroon marshmallow icing. Cookie chupa chups cake dessert lollipop marzipan donut apple pie. Cookie cotton candy oat cake sweet roll topping apple pie marzipan.</p>
+						<div class="row">
+							<div class="col">
+								<button type="button" class="block-header__section-text-new-phone__btn-purchase">PURCHASE NOW</button><button type="button" class="_block-header__section-text-new-phone__btn-learn">learn More</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Блок about-us --------------------------------------------------------------------------- -->
+	<div class="_block-about-us container" id="abput">
+		<div class="row">
+			<div class="col-12 col-sm-10 col-md-7 text-center text-md-left mx-auto mx-md-0 _text">
+				<h2>About us</h2>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+				<div class="_block-about-us__section-icons d-flex justify-content-center justify-content-md-start">
+					<a href="#" class="d-flex justify-content-center align-items-center _icon twitter"><i class="fab fa-twitter"></i></a>
+					<a href="#" class="d-flex justify-content-center align-items-center _icon facebook"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="d-flex justify-content-center align-items-center _icon dribbble"><i class="fab fa-dribbble"></i></a>
+					<a href="#" class="d-flex justify-content-center align-items-center _icon pinterest"><i class="fab fa-pinterest-p"></i></a>
+				</div>
+			</div>
+			<div class="col-5 col-lg-4 d-none d-md-block _image text-right">
+				<img class="img-fluid" src="img/about-us_bags-img.png" alt="bags">
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Блок services --------------------------------------------------------------------------- -->
+	<div class="_block-services container-fluid" id="services">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-4 col-9 mx-auto mx-md-0 px-lg-4 _service">
+					<img src="img/block-services_service-1.png" alt="service-1">
+					<h3>Title Goes Here</h3>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat</p>
+				</div>
+				<div class="col-md-4 col-9 mx-auto mx-md-0 px-lg-4 mt-md-0 mt-4 _service">
+					<img src="img/block-services_service-2.png" alt="service-2">
+					<h3>Title Goes Here</h3>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat</p>
+				</div>
+				<div class="col-md-4 col-9 mx-auto mx-md-0 px-lg-4 mt-md-0 mt-4 _service">
+					<img src="img/block-services_service-3.png" alt="service-3">
+					<h3>Title Goes Here</h3>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Блок features --------------------------------------------------------------------------- -->
+	<div class="_block-features container-fluid" id="features">
+		<div class="row">
+			<div class="container text-center">
+				<h2 class="_block-title">Lorem Ipsum Dolor Sit Amet</h2>
+				<p class="_block-text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</p>
+			
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img src="img/carousel-img-1.jpg" class="d-block w-100" alt="image-1">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="img/carousel-img-2.jpg" class="d-block w-100" alt="image-2">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="img/carousel-img-3.jpg" class="d-block w-100" alt="image-3">
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev justify-content-center justify-content-lg-start justify-content-xl-center" href="#carouselExampleControls" role="button" data-slide="prev">
+				  	<i class="fas fa-arrow-circle-left"></i>
+				  </a>
+				  <a class="carousel-control-next justify-content-center justify-content-lg-end justify-content-xl-center" href="#carouselExampleControls" role="button" data-slide="next">
+				  	<i class="fas fa-arrow-circle-right"></i>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Блок prices --------------------------------------------------------------------------- -->
+	<div class="_block-prices container" id="price">
+		<div class="row text-center d-flex justify-content-center">
+			<div class="col-11 col-lg-6 mx-auto">
+				<h2 class="_block-title">SELECT THE PRICE THAT YOU LIKE</h2>
+				<p class="_block-text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="col-12 col-lg-8 _sec-cards">
+				<div class="row align-items-center flex-column flex-md-row">
+					<div class="col-8 col-sm-6 col-md-4 mt-4 mt-md-0 _card-price">
+						<div class="_sec-title">
+							<h3>ECONOMY</h3>
+							<span class="_sec-price">5<sub>$</sub></span>
+						</div>
+						<div class="_sec-content">
+							<p class="line line-1">2GB</p>
+							<p class="line line-2">200MB</p>
+							<p class="line line-3">Unlimited</p>
+							<p class="line line-4">1 Members</p>
+							<p class="line line-5">1 e-Mail accounts</p>
+							<button>Sign up</button>
+						</div>
+					</div>
+					<div class="col-8 col-sm-6 col-md-4 mt-4 mt-md-0 _card-price">
+						<div class="_sec-title">
+							<h3>PERSONAL</h3>
+							<span class="_sec-price">15<sub>$</sub></span>
+						</div>
+						<div class="_sec-content">
+							<p class="line line-1">5GB</p>
+							<p class="line line-2">500MB</p>
+							<p class="line line-3">Unlimited</p>
+							<p class="line line-4">2 Members</p>
+							<p class="line line-5">2 e-Mail accounts</p>
+							<button>Sign up</button>
+						</div>
+					</div>
+					<div class="col-8 col-sm-6 col-md-4 mt-4 mt-md-0 _card-price">
+						<div class="_sec-title">
+							<h3>BUSINESS</h3>
+							<span class="_sec-price">20<sub>$</sub></span>
+						</div>
+						<div class="_sec-content">
+							<p class="line line-1">10GB</p>
+							<p class="line line-2">1GB</p>
+							<p class="line line-3">Unlimited</p>
+							<p class="line line-4">5 Members</p>
+							<p class="line line-5">5 e-Mail accounts</p>
+							<button>Sign up</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Блок contact us --------------------------------------------------------------------------- -->
+	<div class="_block-contact-us container-fluid" id="contact">
+		<div class="container text-center">
+			<h2 class="_block-title">CONTACT US</h2>
+			<div class="row _block-text text-md-left text-center"> 
+				<div class="col-md-6 col-sm-10 col-11 mx-md-0 mx-auto _sec-address">
+					<span class="_block-contact-us__address"><i class="fas fa-map-marker-alt"></i>Doori 7 Street, Block 15B No.1C Polda I Beringin Raya Bandar Lampung</span>
+				</div>
+				<div class="col-md-6 col-sm-10 col-11 mx-md-0 mx-auto mt-3 mt-md-0 _sec-contacts">
+					<a href="tel:888888888" class="_block-contact-us__phone"><i class="fas fa-phone-square"></i>(0271) 123 - 456</a>
+					<a href="mailto:8888@88.ru" class="_block-contact-us__mail"><i class="fas fa-envelope"></i>company-email@gmail.com</a>
+				</div>
+				
+			</div>
+
+			<form>
+				<div class="row form-group _sec-fields">
+					<div class="col-md-6 col-sm-10 col-11 mx-md-0 mx-auto">
+						<!-- Контейнер поля Name для отображения красной звездочки -->
+						<div class="_input-container">
+							<input type="text"  class="form-control" id="form-control-input-1" required>
+							<div class="_input-placeholder">Your name<span class="_red">*</span></div>
+						</div>
+						<!-- Контейнер поля mail для отображения красной звездочки -->
+						<div class="_input-container">
+							<input type="email"  class="form-control" id="form-control-input-2" required>
+							<div class="_input-placeholder">Your mail<span class="_red">*</span></div>
+						</div>
+						<!-- Контейнер выпадающего списка для замены боковой стрелки -->
+						<div class="_select-container d-flex">
+							<select class="form-control" id="form-control-select-1">
+								<option>Choose your Subject</option>
+								<option>Subject 2</option>
+								<option>Subject 3</option>
+								<option>Subject 4</option>
+								<option>Subject 5</option>
+							</select>
+							<div class="_dropdown-arrow"><i class="fas fa-sort-down"></i></div>
+						</div>
+						
+					</div>
+					<div class="col-md-6 col-sm-10 col-11 mx-md-0 mx-auto mt-sm-0 mt-3">
+						<textarea class="form-control" id="form-control-textarea-1" placeholder="Your message"></textarea>
+					</div>
+				</div>
+				<div class="row form-group d-flex justify-content-end _sec-button">
+					<div class="col-5 col-md-2 mx-md-0 mx-auto">
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<!-- footer --------------------------------------------------------------------------- -->
+	<footer class="container-fluid">
+		<div class="container text-center">
+			<p>© 2013 - 2014 Flat App. All right reserved.</p>
+			<p>Верстка данного макета сделана исключительно в учебных целях. Автор верстки не претендует на коммерческое использование работы.</p>
+		</div>
+	</footer>
+</body>
+</html>

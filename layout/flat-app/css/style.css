@@ -1,0 +1,639 @@
+/* Спецификации ----------------------------------------------------------------------------------------------------------- */
+/* Цвет текста */
+.res-boot *{
+	color: #fff;
+	font-family: "Roboto";
+}
+.res-boot a:hover{
+	color: #999;
+	text-decoration: none;
+}
+
+/* зеленый фон */
+._bg-green{
+	background-color: #1b7e5a;
+}
+
+/* Красный цвет */
+._red{
+	color: red;
+}
+
+/* Максимальная ширина контейнера-флюид */
+.container-fluid{
+	max-width: 1400px;
+}
+
+/* Стили для красной звездочки в поле */
+._input-container{
+	position: relative;
+}
+._input-placeholder{
+	position: absolute;
+	left: 0.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: #999;
+}
+._input-container > input:focus ~ ._input-placeholder{
+	display:none;
+}
+
+
+/* Блок header ------------------------------------------------------------------------------------------------------------ */
+._block-header{
+	background-image: url("../img/header-bg.jpg");
+}
+
+/* Секция с телефоном */
+._block-header__section-phone{
+	height: 454px;
+}
+
+/* Обертка навбара */
+._container-navbar{
+	margin-bottom: 4.5em;
+}
+
+/* Контейнер навбар */
+.res-boot ._container-navbar{
+	transition: .5s;
+}
+
+/* Навбар */
+.res-boot .navbar{
+	padding-top: 1.295em;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* Лого */
+a.navbar-brand{
+	font-size: 1.625em;
+}
+a.navbar-brand img{
+	margin-right: 11px;
+}
+
+/* Ссылки навбара */
+.res-boot .navbar .navbar-nav .nav-item .nav-link{
+	padding-right: 2.25em;
+	padding-left: 0;
+}
+/* Предпоследняя ссылка */
+.res-boot .navbar .navbar-nav .nav-item:nth-last-child(2) .nav-link{
+	padding-right: 1.125em;
+}
+
+/* Ссылки логина в навбаре */
+.res-boot .navbar .navbar-nav .nav-item._block-header__login .nav-link{
+	padding: 12px 20px;
+	background-color: #e76e66;
+}
+
+/* Кнопка сворачивания меню в навбаре */
+.res-boot .navbar-toggler{
+	padding: .6rem .95rem;
+	border-color: rgba(255,255,255,.1);
+	font-size: 1.5rem;
+}
+
+/* Контейнер контента */
+.res-boot ._header-content{
+	padding-top: 144px;
+}
+
+/* Секция с телефоном */
+.res-boot ._block-header__section-phone{
+	padding-right: 21px;
+}
+
+/* Обертка внутри секции с телефоном */
+.res-boot ._block-header__section-phone .wrap-inner{
+	background-image: url("../img/phone-bg.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+}
+
+/* Картинка логотипа в секции */
+.res-boot ._block-header__section-phone .inner img{
+	padding-bottom: 20px;
+}
+
+/* Текст в секции */
+.res-boot ._block-header__section-phone .inner p{
+	font-size: 1.625em;
+	text-transform: uppercase;
+	margin-bottom: 43px;
+	line-height: 1;
+}
+
+/* Кнопка в секции */
+.res-boot ._block-header__section-phone .inner button{
+	width: 133px;
+	height: 55px;
+	border: 3px solid rgba(255, 255, 255, .57);
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .08);
+	margin-bottom: 29px;
+	font-size: 1.625em;
+}
+
+/* Секция текста с кнопками */
+.res-boot ._block-header__section-text-new-phone{
+	padding-bottom: 100px;
+}
+
+/* Заголовок секции текста с кнопками */
+.res-boot ._block-header__section-text-new-phone h2{
+	font-weight: 500;
+	margin-bottom: 20px;
+	font-size: 1.875em;
+}
+
+/* Текст секции текста с кнопками */
+.res-boot ._block-header__section-text-new-phone p{
+	font-weight: 300;
+	margin-bottom: 42px;
+	font-size: 14px;
+	line-height: 1.57em;
+}
+
+/* Кнопки секции текста с кнопками */
+.res-boot ._block-header__section-text-new-phone button{
+	font-weight: 500;
+	font-size: 1.0625em;
+	width: 166px;
+	height: 50px;
+	background-color: #e76e66;
+	border: none;
+	text-transform: uppercase;
+}
+
+/* Кнопка purchase */
+.res-boot ._block-header__section-text-new-phone .block-header__section-text-new-phone__btn-purchase{
+	margin-right: 8px;
+	margin-bottom: 20px;
+}
+
+/* Кнопка learn more */
+.res-boot ._block-header__section-text-new-phone ._block-header__section-text-new-phone__btn-learn{
+	background-color: #dda56c;
+	position: relative;
+}
+
+/* Символ or возле кнопок */
+.res-boot ._block-header__section-text-new-phone ._block-header__section-text-new-phone__btn-learn:after{
+	display: block;
+	position: absolute;
+	left: -18px;
+	top: 9px;
+	content: "or";
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	background-color: #fff;
+	color: #232323;
+	font-size: 1.0625em;
+	line-height: 2em;
+	font-style: italic;
+	z-index: 1000;
+}
+
+/* Блок about us ------------------------------------------------------------------------------------------------------------ */
+.res-boot ._block-about-us ._text{
+	padding-bottom: 123px;
+}
+/* Колонка с текстом */
+.res-boot ._block-about-us ._text{
+	margin-top: 90px;
+}
+
+/* Заголовок */
+.res-boot ._block-about-us ._text h2{
+	color: #232323;
+	font-size: 1.375em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+/* Абзац */
+.res-boot ._block-about-us ._text p{
+	color: #4a4848;
+	font-size: .875em;
+	font-weight: 300;
+	margin-top: 24px;
+	line-height: 1.375em;
+}
+
+/* Секция с иконками */
+.res-boot ._block-about-us__section-icons{
+	margin-top: 30px;
+}
+
+/* Иконки */
+.res-boot ._block-about-us__section-icons ._icon{
+	width: 48px;
+	height: 45px;
+	border-radius: 1px;
+	margin-right: 20px;
+}
+.res-boot ._block-about-us__section-icons ._icon:last-of-type{
+	margin-right: 0;
+}
+/* Текст иконок */
+.res-boot ._block-about-us__section-icons ._icon i{
+	text-shadow: 2px 2px 2px rgba(0,0,0,.18),
+				5px 5px 3px rgba(0,0,0,.18),
+				8px 8px 4px rgba(0,0,0,.18),
+				10px 10px 5px rgba(0,0,0,.18);
+}
+
+/* Цвет фона иконок */
+.res-boot ._block-about-us__section-icons ._icon.twitter{
+	background-color: #49c8f5;
+}
+.res-boot ._block-about-us__section-icons ._icon.facebook{
+	background-color: #3b5a9b;
+}
+.res-boot ._block-about-us__section-icons ._icon.dribbble{
+	background-color: #ef5b93;
+}
+.res-boot ._block-about-us__section-icons ._icon.pinterest{
+	background-color: #ed2e2e;
+}
+
+/* Колонка с изображением */
+.res-boot ._block-about-us ._image{
+	margin-top: 108px;
+}
+
+/* Блок services ------------------------------------------------------------------------------------------------------------ */
+.res-boot ._block-services{
+	background-color: #f6f6f7;
+	padding: 68px 0 74px;
+}
+
+/* Заголовок услуги */
+.res-boot ._block-services ._service h3{
+	margin-top: 38px;
+	color: #232323;
+	font-size: 1.375em;
+	line-height: 1;
+}
+
+/* Текст услуги */
+.res-boot ._block-services ._service p{
+	margin-top: 16px;
+	color: #4a4848;
+	font-size: .875em;
+	line-height: 1.375em;
+}
+
+
+/* Блок features ----------------------------------------------------------------------------------------------------------- */
+.res-boot ._block-features{
+	padding-top: 48px;
+	background-color: #dda56c;
+}
+
+/* Заголовок блока */
+.res-boot ._block-features ._block-title{
+	font-size: 1.75em;
+	line-height: 1;
+	margin-bottom: 17px;
+}
+
+/* Текст блока */
+.res-boot ._block-features ._block-text{
+	font-size: 1.125em;
+	line-height: 1;
+	font-weight: 300;
+	margin-bottom: 37px;
+}
+
+/* Обертка слайдера */
+.res-boot .carousel-inner{
+	max-width: 755px;
+	margin: 0 auto;
+	border-radius: 7px;
+}
+
+/* Размер и цвет управляющих стрелок слайдера */
+.res-boot .carousel > a i{
+	font-size: 1.625em;
+	color: #e6e6e6;
+}
+
+
+/* Блок prices ---------------------------------------------------------------------------------------------------------- */
+.res-boot ._block-prices{
+	padding: 69px 0 73px;
+}
+
+/* Заголовок блока */
+.res-boot ._block-prices ._block-title{
+	color: #232323;
+	font-size: 1.25em;
+	line-height: 1;
+	margin-bottom: 17px;
+}
+
+/* Текст блока */
+.res-boot ._block-prices ._block-text{
+	color: #999999;
+	font-size: 1em;
+	line-height: 1.375em;
+	margin-bottom: 45px;
+}
+
+/* Секция с карточками */
+.res-boot ._block-prices ._sec-cards{
+	padding-right: 2.3em;
+	padding-left: 2.3em;
+}
+
+/* Карточка с ценой */
+.res-boot ._block-prices ._card-price{
+
+}
+
+/* Цвет карточки */
+.res-boot ._block-prices ._card-price:nth-of-type(1) ._sec-content{
+	background-color: #6cbfa1;
+}
+.res-boot ._block-prices ._card-price:nth-of-type(2) ._sec-content{
+	background-color: #f3aea8;
+}
+.res-boot ._block-prices ._card-price:nth-of-type(3) ._sec-content{
+	background-color: #9bc9d4;
+}
+
+/* Секция заголовка */
+.res-boot ._block-prices ._card-price ._sec-title{
+	height: 72px;
+	position: relative;
+	padding-top: 16px;
+}
+
+/* Заголовок */
+.res-boot ._block-prices ._card-price ._sec-title h3{
+	font-weight: 400;
+	font-size: 1.125em;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+/* Цена */
+.res-boot ._block-prices ._card-price ._sec-title ._sec-price{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 100%;
+	transform: translate(-50%, 50%);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	font-size: 1.5em;
+	font-weight: 400;
+	color: #fff;
+}
+.res-boot ._block-prices ._card-price ._sec-title ._sec-price sub{
+	font-size: .583em;
+	bottom: -.09em;
+}
+
+/* Цвет цены */
+.res-boot ._block-prices ._card-price:nth-of-type(1) ._sec-title ._sec-price{
+	background-color: #166549;
+}
+.res-boot ._block-prices ._card-price:nth-of-type(2) ._sec-title ._sec-price{
+	background-color: #b95752;
+}
+.res-boot ._block-prices ._card-price:nth-of-type(3) ._sec-title ._sec-price{
+	background-color: #457b87;
+}
+
+/* Цвет секции заголовка и кнопки */
+.res-boot ._block-prices ._card-price:nth-of-type(1) ._sec-title,
+.res-boot ._block-prices ._card-price:nth-of-type(1) button{
+	background-color: #1b7e5a;
+}
+.res-boot ._block-prices ._card-price:nth-of-type(2) ._sec-title,
+.res-boot ._block-prices ._card-price:nth-of-type(2) button{
+	background-color: #e76e66;
+}
+.res-boot ._block-prices ._card-price:nth-of-type(3) ._sec-title,
+.res-boot ._block-prices ._card-price:nth-of-type(3) button{
+	background-color: #579aa9;
+}
+
+/* Секция с контентом */
+.res-boot ._block-prices ._card-price ._sec-content{
+	padding-top: 44px;
+	padding-bottom: 16px;
+}
+
+/* Характеристики */
+.res-boot ._block-prices ._card-price ._sec-content .line{
+	line-height: 1;
+	margin-bottom: 1.1875em;
+	font-size: .875em;
+	font-weight: 300;
+}
+
+/* Кнопка */
+.res-boot ._block-prices ._card-price ._sec-content button{
+	border: none;
+	width: 79px;
+	height: 41px;
+	font-size: .875em;
+	text-transform: uppercase;
+}
+
+
+/* Блок about us -------------------------------------------------------------------------------------------------- */
+.res-boot ._block-contact-us{
+	background-color: #2e2e2e;
+	padding: 69px 0 71px;
+}
+
+/* Заголовок блока */
+.res-boot ._block-contact-us ._block-title{
+	font-size: 1.25em;
+	line-height: 1;
+	text-transform: uppercase;
+	margin-bottom: 38px;
+}
+
+/* Секция с текстом */
+.res-boot ._block-contact-us ._block-text{
+	line-height: 1;
+	margin-bottom: 17px;
+	font-size: 0.875em;
+}
+
+/* Иконки */
+.res-boot ._block-contact-us ._block-text i.fas{
+	margin-right: 8px;
+}
+
+/* Контакты */
+.res-boot ._block-contact-us ._block-text ._sec-contacts{
+	padding-left: 20px;
+}
+
+/* Телефон */
+.res-boot ._block-contact-us ._block-text ._sec-contacts ._block-contact-us__phone{
+	margin-right: 28px;
+}
+
+/* Обертка полей ввода формы */
+.res-boot ._block-contact-us .form-group ._input-container{
+	margin-bottom: 15px;
+}
+
+/* Поля ввода формы, select и textarea */
+.res-boot ._block-contact-us .form-group ._input-container input,
+.res-boot ._block-contact-us .form-group ._select-container select,
+.res-boot #form-control-textarea-1{
+	border: 3px solid #eee;
+	border-radius: 0;
+	font-size: .875em;
+	color: #999;
+	font-style: italic;
+}
+
+/* Цвет текста select и textarea */
+.res-boot ._block-contact-us .form-group ._select-container select,
+.res-boot #form-control-textarea-1,
+.res-boot #form-control-textarea-1::placeholder{
+	color: #b0b0b0 !important;
+}
+
+/* Размер и отступы инпутов */
+.res-boot ._block-contact-us .form-group ._input-container input{
+	left: 15px;
+	height: 45px;
+}
+
+/* Placeholder полей ввода формы */
+.res-boot ._block-contact-us .form-group ._input-container ._input-placeholder{
+	color: #999;
+	font-size: .875em;
+	font-style: italic;
+	left: 15px;	
+}
+
+/* Обертка поля select */
+.res-boot ._block-contact-us .form-group ._select-container{
+	position: relative;
+}
+
+/* Поле select */
+.res-boot ._block-contact-us .form-group ._select-container select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 45px;
+}
+
+/* Стрелка поля select */
+.res-boot ._block-contact-us .form-group ._select-container ._dropdown-arrow{
+	width: 31px;
+	height: 31px;
+	background-color: #e76e66;
+	position: absolute;
+	right: 10px;
+	top: 7px;
+	pointer-events: none;
+}
+
+/* textarea формы */
+.res-boot ._block-contact-us .form-group textarea.form-control{
+	height: 100%;
+}
+
+/* Секция с кнопкой */
+.res-boot ._block-contact-us .form-group._sec-button{
+	margin-bottom: 0;
+}
+
+/* Кнопка submit */
+.res-boot ._block-contact-us .form-group button[type=submit]{
+	width: 79px;
+	height: 41px;
+	background-color: #e76e66;
+	font-size: .875em;
+	font-weight: 500;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0;
+}
+
+
+/* footer ---------------------------------------------------------------------------------------------------------- */
+footer{
+	background-color: #171717;
+	padding: 28px 0 23px;
+}
+
+/* Текст футера */
+.res-boot footer p{
+	color: #999999;
+	font-size: .875em;
+	margin-bottom: 0;
+}
+
+
+
+/*==================================================================================================================
+Медиа запросы
+==================================================================================================================*/
+@media (max-width: 991.98px){
+	.res-boot .navbar .navbar-nav .nav-item .nav-link,
+	.res-boot .navbar .navbar-nav .nav-item:nth-last-child(2) .nav-link{
+	    padding-right: 0;
+	}
+}
+
+@media (max-width: 767.98px){
+	/* Нижний оступ блок с текстом в хедере */
+	.res-boot ._block-header__section-text-new-phone{
+		padding-bottom: 30px;
+	}
+
+	/* Выставляем стандартные паддинги секции карточек блока prices и самого блока proces */
+	.res-boot ._block-prices ._sec-cards,
+	.res-boot ._block-prices{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 379.98px){
+	/* Кнопка purchase */
+	.res-boot ._block-header__section-text-new-phone .block-header__section-text-new-phone__btn-purchase{
+		margin-left: 8px;
+	}
+
+	/* Картинка логотипа в секции */
+	.res-boot ._block-header__section-phone .inner img{
+		transform: scale(0.8);
+		padding-bottom: 15px;
+	}
+
+	/* Секция с телефоном */
+	._block-header__section-phone{
+		height: 400px;
+	}
+
+	/* Текст в секции */
+	.res-boot ._block-header__section-phone .inner p{
+		margin-bottom: 30px;
+	}
+}
+
