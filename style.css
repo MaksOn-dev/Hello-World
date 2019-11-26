@@ -1,0 +1,108 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	position: relative;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+body:before{
+	content: '';
+	position: fixed;
+	background: url('bg.jpg') no-repeat center;
+	background-size: cover;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -100;
+}
+
+body:after{
+	content: '';
+	position: fixed;
+	background: rgba(0, 0, 0, .8);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -99;
+}
+
+.works{
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.works h3{
+	font-size: 36px;
+	border-bottom: 3px solid #fff;
+	border-radius: 8px;
+	padding-left: 20px;
+	padding-bottom: 8px;
+}
+
+.cards-wrapper{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.cards-wrapper .card{
+	margin: 12px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	max-height: 400px;
+}
+
+.cards-wrapper .card img{
+	width: 100%;
+}
+
+.cards-wrapper .card .descr-wrapper{	
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: .3s;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, .92);
+	padding: 20px;
+}
+
+.cards-wrapper .card:hover .descr-wrapper{
+	opacity: 1;
+	color: #fff;
+}
+
+.cards-wrapper .card .descr-wrapper h4{
+	font-size: 24px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.cards-wrapper .card .descr-wrapper p{
+	font-size: 20px;
+	margin-bottom: 22px;
+	text-align: center;
+}
+
+.cards-wrapper .card .descr-wrapper li{
+	font-size: 18px;
+	line-height: 1.5;
+}
