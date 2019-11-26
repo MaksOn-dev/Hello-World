@@ -1,0 +1,1692 @@
+/* ===========================================================================================
+Шрифты
+=========================================================================================== */
+
+/* Brandon Grotesque bold ---------------------------------------------------------------------------------------------- */
+@font-face {
+	font-family: 'Brandon Grotesque Bold';
+	src: local('Brandon Grotesque Bold'), local('Brandon-Grotesque-Bold'),
+	    url('../fonts/BrandonGrotesque/BrandonGrotesque-Bold.woff2') format('woff2'),
+	    url('../fonts/BrandonGrotesque/BrandonGrotesque-Bold.woff') format('woff'),
+	    url('../fonts/BrandonGrotesque/BrandonGrotesque-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+/* Gotham black ---------------------------------------------------------------------------------------------- */
+@font-face {
+	font-family: 'Gotham Black';
+	src: url('../fonts/GothamPro/GothamPro-Black.eot');
+	src: url('../fonts/GothamPro/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/GothamPro/GothamPro-Black.woff') format('woff'),
+	url('../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Opens Sans (light, regular), Lato (light, regular, bold) -----------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400&display=swap');
+/* font-family: 'Lato', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+
+
+
+
+/* ===========================================================================================
+Общие стили для всех блоков
+=========================================================================================== */
+*{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: .9;
+	font-size: 12.9px;
+}
+
+/* Контейнер для содержимого блока */
+.container{
+	width: 100%;
+	height: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+/* Время анимации */
+button,
+input[type=submit]{
+	transition: .3s;
+}
+/* Увеличение при наведении */
+button:hover,
+input[type=submit]:hover{
+	transform: scale(1.07);
+	/* Чтобы текст не размывался при увеличении */
+	backface-visibility: hidden;
+}
+
+/* Очистка поведения float-ов */
+.header:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/* Заголовки блоков */
+.container > h3.block-title{
+	color: #394b50;
+	font-family: "Gotham Black";
+	font-size: 30px;
+	letter-spacing: -0.75px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Тексты блоков */
+.container > p.block-text{
+	color: #394b50;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 22px;
+	margin-top: 9px;
+	text-align: center;
+}
+
+
+
+/* ===========================================================================================
+Анимации
+=========================================================================================== */
+/* Анимация поворота на 360 градусов */
+.rotate-center:hover {
+	-webkit-animation: rotate-center 1s cubic-bezier(0, 0.1, 0.265, 1.550) both;
+	        animation: rotate-center 1s cubic-bezier(0, 0.1, 0.265, 1.550) both;
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+
+/* ===========================================================================================
+Стили сайта
+=========================================================================================== */
+
+/* Header ----------------------------------------------------------------------------------------------------------- */
+.header{
+	/*position: fixed;
+	top: 0;*/
+	width: 100%;
+	height: 93px;
+	z-index: 100;
+	background-color: #fff;
+}
+
+.opacity-7{
+	background-color: rgba(0, 0, 0, .7);
+}
+
+/* Позиционирование контейнера */
+.header > .container{
+	position: relative;
+}
+
+/* Лого */
+.logo{
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-image: url('../img/logo.png');
+	background-size: auto;
+	margin-top: 22px;
+}
+
+/* Секция navbar */
+.header .navbar-pc{
+	float: right;
+	margin-top: 42px;
+}
+
+/* Скрываем заголовок меню */
+.header .navbar-pc > .menu{
+	
+}
+
+/* Элементы секции navbar */
+.navbar-pc > a{
+	color: #868686;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 2px;
+
+	padding: 12px 21px;
+	vertical-align: middle;
+}
+/* Элементы секции navbar при наведении */
+.navbar-pc > a:hover{
+	color: #fff;
+	background-color: #ffbb42;
+}
+
+/* Кнопка отображения/скрытия мобильного меню */
+.header .mobile-menu-btn{
+	cursor: pointer;
+	display: none;
+}
+.header .mobile-menu-btn > i{
+	color: #000;
+	font-size: 22px;
+}
+/* Класс для активной кнопки */
+.header .mobile-menu-btn.active > i{
+		color: #fff;
+}
+
+/* Блок home ---------------------------------------------------------------------------------------------------------- */
+.block-home{
+	min-height: 590px;
+	margin-bottom: 200px;
+	padding-top: 110px;
+	padding-bottom: 347px;
+	background-color: #709dca;
+	text-align: center;
+	position: relative;
+}
+
+/* Меняем максимальную ширину контейнера */
+.block-home .container{
+	max-width: 1084px;
+}
+
+/* Заголовок блока */
+.block-home .container > h2{
+	font-family: "Gotham Black";
+	font-size: 35px;
+	letter-spacing: -0.88px;
+	text-transform: uppercase;
+}
+
+/* Текст блока */
+.block-home .container > p{
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #fff;
+}
+
+/* Форма отправки запроса в блоке */
+form{
+	margin-top: 28px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/* Родитель для позиционирования иконок */
+form > div{
+	width: 25.9%;
+	position: relative;
+	display: inline-block;
+}
+
+/* Обертка полей */
+form > div{
+	width: 25.9%;
+	position: relative;
+	display: inline-block;
+}
+
+form > div.button{
+	width: 19.45%;
+}
+
+/* Поля в форме */
+form input{
+	width: 100%;
+	height: 46px;
+	background-color: #fff;
+	border-radius: 2px;
+	padding: 18px 41px;
+	color: #545252;
+}
+
+/* placeholder в формах */
+form input::placeholder{
+	color: #a9a9a9;
+	font-size: 12.9px;
+}
+
+/* Иконки полей */
+form div i{
+	font-size: 16px;
+	color: #6e6e6e;
+	position: absolute;
+	transform: translateY(-50%);
+	left: 15px;
+	top: 50%;
+}
+
+/* Кнопка отправить в форме */
+form input[type=submit]{
+	padding: 0;
+	background-color: #ffbb42;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/* Слайдер */
+.slider{
+	width: 647px;
+	height: 343px;
+	background-image: url("../img/slider/slider-bg.png");
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: -63px;
+	left: 50%;
+	padding: 18px 101px 61px;
+}
+
+/* Обертка слайдов */
+.slider .slideswrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+/* Слайдер */
+.slider .slideswrapper .slide{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Блок управляющих точек слайдера */
+.slider .slider-dots{
+	position: absolute;
+	
+	transform: translateX(-50%);
+	bottom: -36px;
+	left: 50%;
+}
+
+/* Управляющие точки слайдера */
+.slider .slider-dots .dot{
+	float: left;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #dedfe0;
+	border-radius: 50%;
+	margin-right: 9px;
+	transition: .3s;
+}
+/* Убираем отступ у последней точки */
+.slider .slider-dots .dot:last-of-type{
+	margin-right: 0;
+}
+
+/* Стили при наведении на точку */
+.slider .slider-dots .dot:hover{
+	border: 2px solid #1ca8dd;
+	cursor: pointer;
+	transform: scale(1.15);
+}
+
+/* Класс для точки, соответствующей активному слайду */
+.slider .slider-dots .dot.active{
+	border: 2px solid #1ca8dd;
+	cursor: normal;
+}
+
+
+/* Блок service -------------------------------------------------------------------------------------------------------- */
+.block-service{
+	padding-bottom: 150px;
+}
+
+/* Текст блока */
+.block-service .container > p{
+	color: #394b50;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+/* Секция services блока */
+.block-service .section-services{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 85px;
+}
+
+/* Услуга */
+.block-service .section-services .service{
+	width: 550px;
+	height: 150px;
+	padding-left: 84px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+/* Иконка услуги */
+.block-service .section-services .service i{
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #709dca;
+}
+
+/* Иконка услуги при наведении на услугу */
+.block-service .section-services .service:hover i{
+	color: #f6772c;
+}
+
+/* Заголовок услуги */
+.block-service .section-services .service h4{
+	color: #394b50;
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+
+/* Текст услуги */
+.block-service .section-services .service p{
+	margin-top: 12px;
+	color: #7b7b7b;
+	line-height: 22px;
+}
+
+
+/* Блок about us ------------------------------------------------------------------------------------------------- */
+.block-about-us{
+	width: 100%;
+	max-width: 1700px;
+	height: 623px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Левая колонка блока */
+.block-about-us .left-col{
+	position: absolute;
+	top: 0;
+	right: 50%;
+	width: 50%;
+	height: 100%;
+	max-width: 850px;
+	background-image: url('../img/about-us-image.jpg');
+}
+
+/* Правая колонка блока */
+.block-about-us .right-col{
+	background-color: #ffc155;
+	width: 50%;
+	height: 100%;
+	max-width: 850px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+
+/* Урезаем контейнер блока */
+.block-about-us .right-col .container{
+	max-width: 585px;
+	margin: 0;
+	position: relative;
+}
+
+/* Секция about us */
+.block-about-us .right-col .container .section-about-us{
+	width: 505px;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 0;
+}
+
+/* Заголовок секции about us */
+.block-about-us .right-col .container .section-about-us > h3{
+	font-family: "Gotham Black";
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: -0.75px;
+}
+
+/* Текст секции about us */
+.block-about-us .right-col .container .section-about-us > p{
+	margin-top: 20px;
+	line-height: 24px;
+}
+
+/* Кнопка секции about us */
+.block-about-us .right-col .container .section-about-us > button{
+	margin-top: 25px;	
+	width: 145px;
+	height: 46px;
+	border: 1px solid #e7ad48;
+	border-radius: 2px;
+	background-color: #e7ad48;
+	text-align: center;
+
+	font-family: "Lato", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+
+/* Блок pricing-table ------------------------------------------------------------------------------------------------------- */
+.block-pricing-table{
+	background-color: #e7edf3;
+	padding: 129px 0 165px;
+	text-align: center;
+}
+
+/* Секция с карточками тарифных планов */
+.block-pricing-table .price-cards{
+	margin-top: 50px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+/* Карточки тарифных планов */
+.block-pricing-table .price-cards .card{
+	width: 33.3%;
+	height: 441px;
+	text-align: center;
+	padding: 57px 31px 0;
+	border: 1px solid #ccd5df;
+	border-radius: 3px;
+	background-color: #fff;
+}
+/* Убираем боковые границы */
+.block-pricing-table .price-cards .card:nth-of-type(1){
+	border-right: none;
+}
+.block-pricing-table .price-cards .card:nth-of-type(3){
+	border-left: none;
+}
+
+/* Заголовок карточек */
+.block-pricing-table .price-cards .card > h4{
+	color: #818b95;
+	font-family: "Lato", sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+/* Цена тарифного плана в карточке */
+.block-pricing-table .price-cards .card .plan-cost{
+	color: #818b95;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	font-variant: small-caps;
+	margin-top: 30px;
+}
+/* Цена большим шрифтом */
+.block-pricing-table .price-cards .card .plan-cost span{
+	display: block;
+	color: #ffbb42;
+	font-family: "Lato", sans-serif;
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+/* Индекс доллара */
+.block-pricing-table .price-cards .card .plan-cost span sup{
+	top: -0.5em;
+	font-size: 70%;
+	color: inherit;
+}
+
+/* Характеристики плана */
+.block-pricing-table .price-cards .card .character{
+	padding: 14px 0;
+	border-top: 1px solid #e2e9f0;
+	color: #b5bbc1;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+/* Добавляем верхний отступ первого элемента */
+.block-pricing-table .price-cards .card .character.nmb-of-accounts{
+	margin-top: 30px;
+}
+/* Убираем нижний отступ последнего элемента */
+.block-pricing-table .price-cards .card .character:last-of-type{
+	padding-bottom: 0;
+}
+
+/* Кнопка 'начать' в карточке */
+.block-pricing-table .price-cards .card button{
+	width: 131px;
+	height: 42px;
+	background-color: #ffbb42;
+	border-radius: 3px;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-top: 33px;
+}
+
+/* Стиль карточки с классом popular */
+.block-pricing-table .price-cards .card.popular{
+	height: 500px;
+	padding-top: 88px;
+	border: none;
+	background-color: #709dca;
+	color: #fff !important;
+}
+
+/* Цена тарифного плана и заголовок карточки с классом popular */
+.block-pricing-table .price-cards .card.popular > h4,
+.block-pricing-table .price-cards .card.popular .plan-cost,
+.block-pricing-table .price-cards .card.popular .plan-cost span{
+	color: #fff;
+}
+
+/* Характеристики плана карточки с классом popular */
+.block-pricing-table .price-cards .card.popular .character{
+	border-top: 1px solid #8eb8e2;
+	color: #c2e1ff;
+}
+
+/* Блок how it works ------------------------------------------------------------------------------------------------------- */
+.block-how-it-works{
+	padding: 150px 0;
+	text-align: center;
+}
+
+/* Уменьшаем контейнер */
+.block-how-it-works .container{
+	max-width: 1115px;
+}
+
+/* Секция steps */
+.block-how-it-works .how-it-works-steps{
+	margin-top: 70px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/* Шаги секции steps */
+.block-how-it-works .how-it-works-steps .step{
+	width: 220px;
+	height: 300px;
+	text-align: center;
+	padding-top: 200px;
+
+	position: relative;
+}
+
+/* Фоновые картинки карточек шагов */
+.block-how-it-works .how-it-works-steps .step > i{
+	font-size: 72px;
+	color: #709dca;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+}
+
+/* Контейнер стрелок */
+.block-how-it-works .how-it-works-steps > .arrow{
+	position: relative;
+}
+
+/* Стрелки */
+.block-how-it-works .how-it-works-steps > .arrow:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url("../img/steps-arrow-bottom.png");
+	width: 128px;
+	height: 32px;
+	transform: translateX(50%);
+}
+
+/* Перевернутая стрелка */
+.block-how-it-works .how-it-works-steps > .arrow.upside-down:before{
+	transform: translateX(50%) rotate(180deg);
+	top: 95px;
+}
+
+/* Заголовок шагов секции steps */
+.block-how-it-works .how-it-works-steps .step > h4{
+	color: #394b50;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* Текст шагов секции steps */
+.block-how-it-works .how-it-works-steps .step > p{
+	color: #7b7b7b;
+	margin-top: 25px;
+	line-height: 22px;
+}
+
+/* Кнопка блока steps */
+.block-how-it-works .container > button{
+	width: 165px;
+	height: 46px;
+	background-color: #ffbb42;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-top: 85px;
+	border-radius: 2px;
+}
+
+/* Блок happy clients ------------------------------------------------------------------------------------------------------- */
+.block-happy-clients{
+	text-align: center;
+	padding: 140px 0 160px;
+	background-color: #ffc155;
+}
+
+/* Заголовок блока */
+.block-happy-clients .container > h3{
+	color: #fff;
+}
+
+/* Текст блока */
+.block-happy-clients .container > p{
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+}
+
+/* Секция с карточками отзывов клиентов */
+.block-happy-clients .section-clients{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 52px;
+}
+
+/* Карточка клиента */
+.block-happy-clients .section-clients .client-card{
+	width: 48.46%;
+	padding: 40px 25px 50px 25px;
+	background-color: #fff;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+/* Картинка карточки клиента */
+.block-happy-clients .section-clients .client-card .image{
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+/* Картинка для каждой карточки */
+.block-happy-clients .section-clients .client-card.card-1 .image{
+	background-image: url("../img/client-card-photo-1.png");
+}
+.block-happy-clients .section-clients .client-card.card-2 .image{
+	background-image: url("../img/client-card-photo-2.png");
+}
+.block-happy-clients .section-clients .client-card.card-3 .image{
+	background-image: url("../img/client-card-photo-3.png");
+}
+.block-happy-clients .section-clients .client-card.card-4 .image{
+	background-image: url("../img/client-card-photo-4.png");
+}
+
+/* Секция текста отзыва в карточке клиента */
+.block-happy-clients .section-clients .client-card blockquote{
+	padding-top: 8px;
+	float: right;
+	width: 69%;
+	margin: 0;
+	display: inline-block;
+	text-align: left;
+}
+
+/* Текст отзыва в карточке клиента */
+.block-happy-clients .section-clients .client-card blockquote > p{
+	color: #7b7b7b;
+	line-height: 22px;
+	position: relative;
+	padding-bottom: 25px;
+}
+
+/* Кавычки для текста отзыва */
+blockquote > p:before,
+blockquote > p:after{
+	display: inline-block;
+	position: absolute;
+	color: #7b7b7b;
+	font-family: "Brandon Grotesque Bold";
+	font-size: 30px;
+}
+blockquote > p:before{
+	content: '“';
+	top: -6px;
+	left: -18px;
+}
+blockquote > p:after{
+	transform: scaleX(-1);
+	content: '“';
+	bottom: 0;
+	right: -15px;
+}
+
+/* Текст имени и должности в профиле в карточке отзыва */
+.block-happy-clients .section-clients .client-card blockquote cite p{
+	display: inline-block;
+	color: #f6772c;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+/* Должность в профиле в карточке отзыва */
+.block-happy-clients .section-clients .client-card blockquote cite .position{
+	color: #99a9ae;
+}
+
+
+/* Блок contact us ------------------------------------------------------------------------------------------------------- */
+.block-contact-us{
+	padding-top: 150px;
+}
+
+/* Нижний отступ и граница контейнера */
+.block-contact-us .container{
+	padding-bottom: 57px;
+	border-bottom: 1px solid #e3e7ec;
+}
+
+/* Форма подписки */
+.block-contact-us form{
+	max-width: 934px;
+	margin: 38px auto 0;
+}
+
+/* Поля формы */
+.block-contact-us form > .field{
+	border: 1px solid #cbcbcb;
+}
+
+/* Поле name */
+.block-contact-us form > .field.name{
+	width: 33%;
+}
+/* Поле email */
+.block-contact-us form > .field.email{
+	width: 41.5%;
+}
+/* Кнопка отправки формы */
+.block-contact-us form > input[type=submit]{
+	width: 23.3%;
+}
+
+/* Карта */
+.block-contact-us .map{
+	max-width: 1100px;
+	height: 549px;
+	margin: 53px auto 0;
+	padding-top: 37px;
+	background-image: url("../img/map_bg.png");
+}
+
+/* Секция с адресом */
+.block-contact-us .map .section-address{
+	width: 285px;
+	height: 285px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	background-color: #394b50;
+	text-align: center;
+	padding-top: 65px;
+	transform: translateX(-50%);
+	margin-left: 50%;
+	position: relative;
+}
+/* Треугольник секции */
+.block-contact-us .map .section-address:after,
+.block-contact-us .map .section-address:before{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: -16px;
+	left: 50%;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top: 12px solid #394b50;
+}
+.block-contact-us .map .section-address:before{
+	bottom: -25px;
+	border: 8.5px solid transparent;
+	border-top: 15px solid #fff;
+}
+
+/* Стиль заголовка секции с адресом */
+.block-contact-us .map .section-address h4{
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* Стиль текста секции с адресом */
+.block-contact-us .map .section-address > p,
+.block-contact-us .map .section-address > a{
+	color: #aeb7ba;
+	line-height: 24px;
+	display: block;
+}
+
+/* Верзний отступ первой строчки текста от заголовка */
+.block-contact-us .map .section-address > p:first-of-type{
+	margin-top: 12px;
+}
+
+/* Стиль ссылок секции с адресом */
+.block-contact-us .map .section-address a{
+	color: #ffbb42;
+}
+/* Стиль ссылок секции с адресом при наведении */
+.block-contact-us .map .section-address a:hover{
+	text-decoration: underline;
+}
+
+/* Логотип под секцией адреса */
+.block-contact-us .map .section-address .logo{
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: -68px;
+	left: 50%;
+}
+
+
+/* Футер -------------------------------------------------------------------------------------------------------------- */
+footer{
+	padding-top: 65px;
+	text-align: center;
+}
+
+/* Отступ контейнера */
+footer .container{
+	padding-bottom: 45px;
+}
+
+/* Навигационная панель в футере */
+footer .navbar-pc{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+/* Ссылки навигационной панели */
+footer .navbar-pc > a{
+	color: #394b50;
+	white-space: nowrap;
+	font-size: 12.9px;
+}
+
+/* Телефон в футере */
+footer .container > a.phone{
+	display: inline-block;
+	padding-left: 24px;
+	margin-top: 20px;
+	color: #394b50;
+	font-family: 'Lato', sans-serif;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 1.1;
+	background-image: url("../img/footer-phone-icon.png");
+	background-size: auto;
+	background-position: left center;
+}
+/* Ссылка телефона при наведении */
+footer .phone:hover{
+	text-decoration: underline;
+}
+
+/* Секция с иконками соцсетей */
+footer .soc-icons{
+	margin-top: 16px;
+}
+
+/* Отступы иконок соцсетей */
+footer .soc-icons a{
+	margin-right: 6px;
+}
+footer .soc-icons a:last-of-type{
+	margin-right: 0;
+}
+
+/* Стиль иконок соцсетей */
+footer .soc-icons i{
+	color: #709dca;
+	font-size: 18px;
+	line-height: 1;
+}
+
+/* Стиль иконок соцсетей при наведении */
+footer .soc-icons i:hover{
+	color: #ffc155;
+}
+
+/* Строка с защитой прав в футере */
+footer .license{
+	margin: 0 auto;
+	max-width: 1700px;
+	background-color: #709dca;
+	padding: 17px 0; 
+}
+
+
+
+
+/* ===========================================================================================
+Медиа-запросы
+=========================================================================================== */
+
+/* ---------------------------------------------------
+Для разрешения до 1200px
+--------------------------------------------------- */
+
+@media (max-width: 1200px){
+	/* Отступы контейнера */
+	body > div > .container{
+		padding: 0 40px;
+	}
+
+	/* Уменьшаем высоту header */
+	.header{
+		height: 80px;
+	}
+
+	/* Меняем отступ заголовка */
+	.logo{
+		margin-top: 15px;
+	}
+	/* Меняем отступ навигационной панели */
+	.header .navbar-pc{
+		margin-top: 32px;
+	}
+	/* Уменьшаем навигационную панель, чтобы влезла */
+	.navbar-pc > a,
+	footer .navbar-pc > a{
+	    font-size: 11px;
+	    padding: 7px 9px;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения от 992px до 1199px
+--------------------------------------------------- */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	/* Блок services -------------------------------------------------------------------- */
+	/* Уменьшаем ширину и отступы описания сервисов */
+	.block-service .section-services .service {
+	    width: 440px;
+	    padding-left: 75px;
+	    margin-bottom: 30px;
+	}
+
+	
+	/* Блок about us --------------------------------------------------------------------- */
+	/* Уменьшаем высоту блока */
+	.block-about-us{
+		height: 550px;
+	}
+
+	/* Уменьшаем ширину блока описания */
+	.block-about-us .right-col .container .section-about-us {
+	    width: 430px;
+	    right: 30px;
+	}
+
+
+	/* Блок happy clients --------------------------------------------------------------------- */
+	/* Уменьшаем размер фото в отзыве */
+	.block-happy-clients .section-clients .client-card .image{
+		width: 100px;
+		height: 100px;
+	}
+
+	/* Левый отступ текста в отзыве */
+	.block-happy-clients .section-clients .client-card blockquote{
+		margin-left: 20px;
+	}
+}
+
+
+/* ---------------------------------------------------
+Для разрешения до 991px
+--------------------------------------------------- */
+
+@media (max-width: 991px){
+	/* Блок services ---------------------------------------------------------------- */
+	.block-service{
+		padding-bottom: 50px;
+	}
+	/* Меняем позиционирование и размер карточек service */
+	.block-service .section-services{
+		justify-content: center;
+	}
+	.block-service .section-services .service{
+		width: 90%;
+	}
+
+
+	/* Блок pricing table ------------------------------------------------------------------ */
+	/* Уменьшаем вертикальные отступы */
+	.block-pricing-table{
+		padding: 90px 0 110px;
+	}
+
+
+	/* Блок how it works ------------------------------------------------------------------- */
+	/* Уменьшаем вертикальные отступы */
+	.block-how-it-works {
+	    padding: 100px 0;
+	}
+
+	/* Изменяем отступы карточек */
+	.block-how-it-works .how-it-works-steps{
+		justify-content: space-around;
+	}
+
+	/* Увеличиваем ширину карточек, уменьшаем вехние внутренние отступы, выставляем нижние отступы */
+	.block-how-it-works .how-it-works-steps .step{
+		width: 40%;
+		padding-top: 160px;
+		margin-bottom: 20px;
+	}
+
+	/* Скрываем стрелки */
+	.block-how-it-works .how-it-works-steps > .arrow{
+		display: none;
+	}
+
+	/* меньшаем отступ кнопки */
+	.block-how-it-works .container > button{
+		margin-top: 50px;
+	}
+
+
+	/* Блок happy clients ----------------------------------------------------------------------- */
+	/* Уменьшаем вертикальные отступы */
+	.block-happy-clients{
+		padding: 100px 0;
+	}
+
+	/* Уменьшаем отступы в карточке комментария */
+	.block-happy-clients .section-clients .client-card{
+		padding: 30px;
+	}
+
+	/* Делаем картинку в комментарии по-центру */
+	.block-happy-clients .section-clients .client-card .image{
+		float: none;
+	}
+	
+	/* Делаем текст в комментарии по-центру */
+	.block-happy-clients .section-clients .client-card blockquote{
+		float: none;
+		margin-top: 20px;
+		width: 100%;
+		text-align: center;
+	}
+	
+
+	/* footer ------------------------------------------------------------------------------------ */
+	/* Уменьшаем верхний отступ */
+	footer{
+		padding-top: 30px;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения от 768px до 991px
+--------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 991px){
+	/* Блок home -------------------------------------------------------------------- */
+	/* Уменьшаем поля формы */
+	form input {
+	    height: 35px;
+	    padding: 12.5px 35px;
+	    color: #545252;
+	}
+	
+	/* Уменьшаем отступ иконки */
+	form div i{
+		left: 10px;
+	}
+
+	/* Уменьшаем шрифт кнопки */
+	form input[type="submit"]{
+		font-size: 12px;
+	}
+
+
+	/* Блок about us --------------------------------------------------------------------- */
+	/* Уменьшаем ширину секции справой колонки */
+	.block-about-us .right-col .container .section-about-us {
+	    width: 315px;
+	    right: 20px;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения до 767px (планшеты и моб. телефоны)
+--------------------------------------------------- */
+
+@media (max-width: 767px){
+	/* Отступы контейнера */
+	body > div > .container{
+		padding: 0 20px;
+	}
+
+
+	/* Header ----------------------------------------------------------------------------------------------------------- */
+	.header .container{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	/* Уменьшаем высоту header */
+	.header{
+		height: unset;
+		padding: 12px 0;
+	}
+
+	/* Лого */
+	.header .logo{
+		margin-top: 0;
+		float: none;
+	}
+
+	/* Секция navbar */
+	.header .navbar-pc{
+		margin-top: 15px;
+		float: none;
+	}
+
+	/* Уменьшаем элементы навигационной панели, чтобы влезла */
+	.navbar-pc > a,
+	footer .navbar-pc > a{
+	    padding: 6px 7px;
+	}
+
+
+	/* Блок home ---------------------------------------------------------------------------------------------------------- */
+	.block-home{
+		margin-bottom: 170px;
+	}
+
+	/* Заголовок блока */
+	.block-home .container > h2{
+		font-size: 30px;
+	}
+
+	/* форма */
+	.block-home form{
+		justify-content: center;
+	}
+
+	/* Обертка полей */
+	.block-home form > div:not(.button){
+		width: 32%;
+		margin-right: auto;
+	}
+	.block-home form > div.field:nth-of-type(3){
+		margin-right: 0;
+	}
+	
+	/* Кнопка отправить */
+	.block-home form > div.button{
+		margin-top: 25px;
+		width: 32%;
+	}
+
+	/* Уменьшаем слайдер */
+	.slider {
+	    width: 550px;
+	    height: 291px;
+	    padding: 16px 85px 61px;
+	}
+
+
+	/* Блок services ---------------------------------------------------------------- */
+	.block-service{
+		padding-bottom: 20px;
+	}
+
+
+	/* Блок about us --------------------------------------------------------------------- */
+	/* Уменьшаем ширину секции справой колонки */
+	.block-about-us .right-col .container .section-about-us {
+	    width: 85%;
+	    right: 20px;
+	}
+	
+
+	/* Блок pricing table ------------------------------------------------------------------ */
+	/* Уменьшаем вертикальные отступы */
+	.block-pricing-table{
+		padding: 80px 0 100px;
+	}
+	
+	/* Карточки таблицы */
+	.block-pricing-table .price-cards .card{
+		padding: 57px 20px 0;
+		border: 1px solid #ccd5df;
+		border-radius: 3px;
+		background-color: #fff;
+		width: 32%;
+	}
+
+	/* Стиль карточки с классом popular */
+	.block-pricing-table .price-cards .card.popular{
+		height: 490px;
+		padding-top: 83px;
+		width: 36%;
+	}
+
+	/* Заголовок карточек */
+	.block-pricing-table .price-cards .card > h4{
+		font-size: 20px;
+	}
+
+	/* Характеристики плана */
+	.block-pricing-table .price-cards .card .character{
+		font-size: 12px;
+	}
+
+
+	/* Блок how it works ------------------------------------------------------------------- */
+	/* Уменьшаем вертикальные отступы */
+	.block-how-it-works {
+	    padding: 70px 0;
+	}
+	/* меньшаем отступ кнопки */
+	.block-how-it-works .container > button{
+		margin-top: 10px;
+	}
+
+
+	/* Блок happy clients ----------------------------------------------------------------------- */
+	/* Уменьшаем вертикальные отступы */
+	.block-happy-clients{
+		padding: 70px 0;
+	}
+
+	/* Уменьшаем отступы в карточке комментария */
+	.block-happy-clients .section-clients .client-card{
+		padding: 20px 25px 30px;
+	}
+
+
+	/* Блок contact us ------------------------------------------------------------------------------------------------------- */
+	.block-contact-us{
+		padding-top: 80px;
+	}
+
+	/* Форма */
+
+
+	/* Поля формы */
+	.block-contact-us form > .field.name,
+	.block-contact-us form > .field.email,
+	.block-contact-us form > input[type="submit"]{
+		width: 31%;
+	}
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения от 576px до 767px
+--------------------------------------------------- */
+@media (min-width: 576px) and (max-width: 767px){
+	
+}
+
+
+
+/* ---------------------------------------------------
+Для разрешения до 575px
+--------------------------------------------------- */
+
+@media (max-width: 575px){
+	/* Header ----------------------------------------------------------------------------------------------------------- */
+	.header{
+		padding: 6px 0;
+		position: fixed;
+	}
+
+	/* Поправляем флекс */
+	.header > .container{
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0 35px;
+	}
+
+	/* Включаем кнопку отображения/скрытия мобильного меню */
+	.header .mobile-menu-btn{
+		display: block;		
+	}
+
+	/* Навбар */
+	.header .navbar{
+		position: absolute;
+		top: 56px;
+		left: 0;
+		margin-top: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, .7);
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		text-align: center;
+		z-index: 100;
+		display: none;
+		transition: unset;
+	}
+
+	/* Вкладки навбара */
+	.header .navbar > a{
+		display: block;
+		width: 100%;
+		color: #fff;
+		padding: 14px 0;
+		margin: 7px 0;
+		font-size: 16px;
+	}
+
+
+	/* Блок home ---------------------------------------------------------------------------------------------------------- */
+	.block-home{
+		margin-bottom: 170px;
+		min-height: unset;
+		padding-bottom: 200px;
+	}
+
+	/* Обертка полей */
+	.block-home form > div:not(.button){
+		width: 75%;
+		margin: 0 auto 25px;
+	}
+	.block-home form > div.field:nth-of-type(3){
+		margin-right: auto;
+	}
+
+	/* Кнопка отправить */
+	.block-home form > div.button{
+		margin-top: 0;
+		width: 40%;
+	}
+
+	/* Уменьшаем слайдер */
+	.slider {
+	    width: 370px;
+	    height: 195.5px;
+	    padding: 11px 57px 42px;
+	}
+
+
+	/* Блок services ---------------------------------------------------------------- */
+
+	.block-service .section-services .service{
+		width: 100%;
+		height: auto;
+		margin-bottom: 30px;
+	}
+
+
+	/* Блок about us ------------------------------------------------------------------------------------------------- */
+	.block-about-us{
+		height: 500px;
+	}
+	/* Правая колонка блока */
+	.block-about-us .right-col{
+		width: 100%;
+		left: 0;
+	}
+
+
+	/* Блок pricing table ------------------------------------------------------------------ */
+	/* Карточки таблицы */
+	.block-pricing-table .price-cards .card,
+	.block-pricing-table .price-cards .card.popular{
+		width: 60%;
+		height: 440px;
+		padding: 57px 20px 0;
+		margin-bottom: 40px;
+		border: 1px solid #ccd5df !important;
+	}
+	.block-pricing-table .price-cards .card:last-of-type{
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 450px){
+		.block-pricing-table .price-cards .card,
+		.block-pricing-table .price-cards .card.popular{
+			width: 90%;
+		}
+	}
+
+
+	/* Блок how it works ------------------------------------------------------------------- */
+	/* Секция steps */
+	.block-how-it-works .how-it-works-steps{
+		margin-top: 30px;
+	}
+	/* Увеличиваем ширину карточек, уменьшаем вехние внутренние отступы, выставляем нижние отступы */
+	.block-how-it-works .how-it-works-steps .step{
+		width: 80%;
+		padding-top: 140px;
+		margin-bottom: 0;
+		height: 270px;
+	}
+
+
+	/* Блок happy clients --------------------------------------------------------------------------------------------------- */
+	/* Карточка клиента */
+	.block-happy-clients .section-clients .client-card{
+		width: 100%;
+		padding: 40px 25px 50px 25px;
+		background-color: #fff;
+		border-radius: 3px;
+		margin-bottom: 20px;
+	}
+
+
+	/* Блок contact us ------------------------------------------------------------------------------------------------------- */
+	/* Поля формы */
+	.block-contact-us form > .field.name,
+	.block-contact-us form > .field.email,
+	.block-contact-us form > input[type="submit"]{
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.block-contact-us form > input[type="submit"]{
+		margin-bottom: 0;
+	}
+
+	/* Нижний отступ и граница контейнера */
+	.block-contact-us .container{
+		padding-bottom: 20px;
+	}
+
+
+	/* Футер -------------------------------------------------------------------------------------------------------------- */
+
+	/* Навигационная панель в футере */
+	footer .navbar-pc{
+		display: none;
+	}
+
+	/* Секция с иконками соцсетей */
+	footer .soc-icons{
+		margin-top: 26px;
+	}
+
+	/* Отступы иконок соцсетей */
+	footer .soc-icons a{
+		margin-right: 15px;
+	}
+	footer .soc-icons a:last-of-type{
+		margin-right: 0;
+	}
+
+	/* Стиль иконок соцсетей */
+	footer .soc-icons i{
+		font-size: 24px;
+	}
+}
+
+
+/* ---------------------------------------------------
+Для разрешения до 399px
+--------------------------------------------------- */
+
+@media (max-width: 399px){
+	body > div > .container{
+		padding: 0 10px;
+	}
+
+	/* Блок home ---------------------------------------------------------------------------------------------------------- */
+	/* Обертка полей */
+	.block-home form > div:not(.button){
+		width: 100%;
+	}
+	/* Кнопка */
+	.block-home form > div.button{
+		width: 75%;
+	}
+
+
+	/* Блок home ---------------------------------------------------------------------------------------------------------- */
+	.block-home{
+		margin-bottom: 80px;
+		padding-bottom: 50px;
+	}
+
+	/* Убираем слайдер */
+	.slider {
+		display: none;
+	}
+}
