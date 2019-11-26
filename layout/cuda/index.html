@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cuda</title>
+	<!-- Общие стили -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Шрифты -->
+	<!-- Titillium web -->
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,600,700&display=swap" rel="stylesheet">
+	
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" >
+
+
+	<!-- Скрипт jquery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Общий скрипт -->
+	<script src="js/main.js"></script>
+
+	<!-- Bootstrap, popper -->
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body class="res-boot" data-spy="scroll" data-target="#navbar-top">
+	<!-- Верхнее навигационное меню ----------------------------------------------------------------------------- -->
+	<header class="_top-menu container-fluid fixed-top">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg" id="navbar-top">
+				<a href="#" class="navbar-brand"><img src="img/top-menu_logo.png" alt="logotype Cuda"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Кнопка раскрытия навигационного меню на мобильных устройствах">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarItems">
+					<ul class="navbar-nav ml-auto text-uppercase">
+						<li class="nav-item active">
+							<a href="#block-home" class="nav-link px-3">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#block-about" class="nav-link px-3">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="#block-work" class="nav-link px-3">Work</a>
+						</li>
+						<li class="nav-item">
+							<a href="#block-blog" class="nav-link px-3">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a href="#block-contact" class="nav-link px-3">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+	<!-- Блок home ------------------------------------------------------------------------------------------------->
+	<div class="_block-home container-fluid" id="block-home">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-11 col mx-auto">
+					<h1 class="_title">Hi there! We are the new kids on the block <div class="_separator d-none d-lg-block"></div>and we build awesome websites and mobile apps.</h1>
+					<button class="_block-button _btn-main-type" type="button">WORK WITH US!</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- Блок services -------------------------------------------------------------------------------------------->
+	<div class="_block-services container-fluid" id="block-about">
+		<div class="container">
+			<div class="_text-container text-center">
+				<h1 class="_block-title">SERVICES WE PROVIDE</h1>
+				<span class="_title-line"></span>
+				<p class="_block-text mx-auto">We are working with both individuals and businesses from all over the globe to create awesome websites and applications.</p>
+			</div>
+			<div class="_cards-container _sec-services row">
+				<div class="_card-wrap col-lg-3 col-sm-6 col-10 mx-auto text-center">
+					<div class="card h-100">
+						<div class="card-img-top">
+							<img src="img/_block-services-img-1.png" alt="Красный флажок">
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">Branding</h3>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-10 mx-auto text-center">
+					<div class="card h-100">
+						<div class="card-img-top">
+							<img src="img/_block-services-img-2.png" alt="Карандаш">
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">Design</h3>
+							<p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-10 mx-auto text-center">
+					<div class="card h-100">
+						<div class="card-img-top">
+							<img src="img/_block-services-img-3.png" alt="Шестеренки">
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">Development</h3>
+							<p class="card-text">At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.</p>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-10 mx-auto text-center">
+					<div class="card h-100">
+						<div class="card-img-top">
+							<img src="img/_block-services-img-4.png" alt="Ракета">
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">ROCKET SCIENCE</h3>
+							<p class="card-text">Et harum quidem rerum est et expedita distinctio. Nam libero tempore.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Блок team ------------------------------------------------------------------------------------------------>
+	<div class="_block-team container-fluid">
+		<div class="container">
+			<div class="_text-container text-center">
+				<h1 class="_block-title">MEET OUR BEAUTIFUL TEAM</h1>
+				<span class="_title-line"></span>
+				<p class="_block-text">We are a small team of designers and developers, who help brands with big ideas.</p>
+			</div>
+			<div class="_cards-container _sec-command row">
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<img class="card-img-top" src="img/_block-team_card-img-1.jpg" alt="Фото участника команды">
+						<div class="card-body">
+							<h3 class="card-title">ANNE HATHAWAY</h3>
+							<a class="card-subtitle _position" href="#">CEO / Marketing Guru</a>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-center _sec-team-contacts">
+							<a href="#" class="_team-contact _soc-icon _facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="_team-contact _soc-icon _twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="_team-contact _soc-icon _linkedin"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="_team-contact _soc-icon _mail"><i class="fas fa-envelope"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<img class="card-img-top" src="img/_block-team_card-img-2.jpg" alt="Фото участника команды">
+						<div class="card-body">
+							<h3 class="card-title">Kate Upton</h3>
+							<a class="card-subtitle _position" href="#">Creative Director</a>
+							<p class="card-text">Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-center _sec-team-contacts">
+							<a href="#" class="_team-contact _soc-icon _twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="_team-contact _soc-icon _linkedin"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="_team-contact _soc-icon _mail"><i class="fas fa-envelope"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<img class="card-img-top" src="img/_block-team_card-img-3.jpg" alt="Фото участника команды">
+						<div class="card-body">
+							<h3 class="card-title">Olivia Wilde</h3>
+							<a class="card-subtitle _position" href="#">Lead Designer</a>
+							<p class="card-text">Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem nesciunt.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-center _sec-team-contacts">
+							<a href="#" class="_team-contact _soc-icon _facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="_team-contact _soc-icon _twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="_team-contact _soc-icon _linkedin"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="_team-contact _soc-icon _mail"><i class="fas fa-envelope"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<img class="card-img-top" src="img/_block-team_card-img-4.jpg" alt="Фото участника команды">
+						<div class="card-body">
+							<h3 class="card-title">Ashley Greene</h3>
+							<a class="card-subtitle _position" href="#">SEO / Developer</a>
+							<p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-center _sec-team-contacts">
+							<a href="#" class="_team-contact _soc-icon _facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="_team-contact _soc-icon _twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="_team-contact _soc-icon _mail"><i class="fas fa-envelope"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Блок skills ----------------------------------------------------------------------------------------------->
+	<div class="_block-skills container-fluid">
+		<div class="container">
+			<div class="_text-container text-center">
+				<h1 class="_block-title">WE GOT SKILLS!</h1>
+				<span class="_title-line"></span>
+				<p class="_block-text mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="_sec-skills row">
+				<div class="_card-wrap col-lg-3 col-sm-6 col text-center">
+					<div class="card text-center h-100">
+						<div class="card-img-top">
+							<img src="img/_block-skills-img-1.png">
+							<div class="card-img-overlay">
+								<p class="_skill-in-percents">90<span class="_percent">%</span></p>
+							</div>
+						</div>
+						
+						<div class="card-body">
+							<h3 class="card-title">Web Design</h3>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<div class="card-img-top">
+							<img src="img/_block-skills-img-2.png">
+							<div class="card-img-overlay">
+								<p class="_skill-in-percents">75<span class="_percent">%</span></p>
+							</div>
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">HTML / CSS</h3>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<div class="card-img-top">
+							<img src="img/_block-skills-img-3.png">
+							<div class="card-img-overlay">
+								<p class="_skill-in-percents">70<span class="_percent">%</span></p>
+							</div>
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">GRAPHIC DESIGN</h3>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-lg-3 col-sm-6 col-11 mx-auto text-center">
+					<div class="card text-center h-100">
+						<div class="card-img-top">
+							<img src="img/_block-skills-img-4.png">
+							<div class="card-img-overlay">
+								<p class="_skill-in-percents">85<span class="_percent">%</span></p>
+							</div>
+						</div>
+						<div class="card-body">
+							<h3 class="card-title">UI / UX</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Блок portfolio ------------------------------------------------------------------------------------------>
+	<div class="_block-portfolio container-fluid" id="block-work">
+		<div class="container text-center">
+			<div class="_text-container">
+				<h1 class="_block-title">OUR PORTFOLIO</h1>
+				<span class="_title-line"></span>
+				<p class="_block-text mx-auto">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam</p>
+			</div>
+
+			<div class="_portfolio-container">
+				<div class="_sec-tabs-btns d-flex justify-content-center flex-wrap">
+					<div class="_btn btn-1 active" data-filter-value="all">All</div>
+					<div class="_btn btn-2" data-filter-value="web">Web</div>
+					<div class="_btn btn-3" data-filter-value="apps">Apps</div>
+					<div class="_btn btn-4" data-filter-value="icons">Icons</div>
+				</div>
+
+				<div class="_sec-portfolio-cards row">
+					<div class="col-md-6 col-11 mx-auto">
+						<div class="card h-100">
+							<img src="img/_block-portfolio_card-img-1.png" alt="Изображение работы" class="card-img-top">
+							<div class="card-body">
+								<h3 class="card-title">Isometric Perspective Mock-Up</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-11 mx-auto">
+						<div class="card h-100">
+							<img src="img/_block-portfolio_card-img-2.png" alt="Изображение работы" class="card-img-top">
+							<div class="card-body">
+								<h3 class="card-title">Time Zone App UI</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-11 mx-auto">
+						<div class="card h-100">
+							<img src="img/_block-portfolio_card-img-3.png" alt="Изображение работы" class="card-img-top">
+							<div class="card-body">
+								<h3 class="card-title">Viro Media Players UI</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-11 mx-auto">
+						<div class="card h-100">
+							<img src="img/_block-portfolio_card-img-4.png" alt="Изображение работы" class="card-img-top">
+							<div class="card-body">
+								<h3 class="card-title">Blog / Magazine Flat UI Kit</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="_block-portfolio-btn _btn-main-type" type="button">LOAD MORE PROJECTS</button>
+		</div>
+	</div>
+
+	<!-- Блок comments --------------------------------------------------------------------------------->
+	<div class="_block-what-people-say container-fluid" id="block-blog">
+		<div class="container">
+			<div class="_text-container text-center">
+				<h1 class="_block-title">WHAT PEOPLE SAY ABOUT US</h1>
+				<span class="_title-line"></span>
+				<p class="_block-text mx-auto">Our clients love us!</p>
+			</div>
+
+			<div class="_comments-container row">
+				<div class="_card-wrap col-md-6 col-12 mx-auto">
+					<div class="card d-flex flex-row h-100">
+						<div class="_card-img-left"><img src="img/_block-comments_card-img-1.jpg" alt="Фото комментатора"></div>
+						<div class="card-body">
+							<blockquote class="d-flex flex-column h-100">
+								<p class="_quote-text">"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
+								<cite class="_quote-author">Chanel Iman</cite>
+								<p class="_author-pos">CEO of Pinterest</p>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-md-6 col-12 mx-auto">
+					<div class="card d-flex flex-row h-100">
+						<div class="_card-img-left"><img src="img/_block-comments_card-img-2.jpg" alt="Фото комментатора"></div>
+						<div class="card-body">
+							<blockquote class="d-flex flex-column h-100">
+								<p class="_quote-text">"Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta."</p>
+								<cite class="_quote-author">ADRIANA LIMA</cite>
+								<p class="_author-pos">Founder of Instagram</p>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-md-6 col-12 mx-auto">
+					<div class="card d-flex flex-row mb-sm-0 h-100">
+						<div class="_card-img-left"><img src="img/_block-comments_card-img-3.jpg" alt="Фото комментатора"></div>
+						<div class="card-body">
+							<blockquote class="d-flex flex-column h-100">
+								<p class="_quote-text">"Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta."</p>
+								<cite class="_quote-author">ANNE HATHAWAY</cite>
+								<p class="_author-pos">Lead Designer at Behance</p>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="_card-wrap col-md-6 col-12 mx-auto">
+					<div class="card d-flex flex-row mb-sm-0 h-100">
+						<div class="_card-img-left"><img src="img/_block-comments_card-img-4.jpg" alt="Фото комментатора"></div>
+						<div class="card-body">
+							<blockquote class="d-flex flex-column h-100">
+								<p class="_quote-text">"Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque."</p>
+								<cite class="_quote-author">EMMA STONE</cite>
+								<p class="_author-pos">Co-Founder of Shazam</p>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Блок cantacts ------------------------------------------------------------------------------------------->
+	<div class="_block-contact container-fluid" id="block-contact">
+		<div class="container">
+			<div class="_text-container text-center">
+				<h1 class="_block-title">GET IN TOUCH</h1>
+				<span class="_title-line"></span>
+				<p class="_block-text _address-and-phone-line"><span class="_address">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. </span><a href="tel:2024561111" class="_phone">Tel: (202) 456-1111</a></p>
+			</div>
+			<form action="POST" class="text-center">
+				<div class="row d-flex justify-content-center">
+					<!-- Контейнер поля Name для отображения красной звездочки -->
+					<div class="_input-container col-md-5 col-12">
+						<input type="text"  class="form-control" id="form-control-input-1" required>
+						<div class="_input-placeholder">Your Name<span class="_red">*</span></div>
+					</div>
+					<!-- Контейнер поля mail для отображения красной звездочки -->
+					<div class="_input-container col-md-5 col-12">
+						<input type="email"  class="form-control" id="form-control-input-2" required>
+						<div class="_input-placeholder">Your Email<span class="_red">*</span></div>
+					</div>
+				</div>
+				<div class="row d-flex justify-content-center">
+					<!-- Контейнер textarea для отображения красной звездочки -->
+					<div class="_input-container _textarea-container col-md-10">
+						<textarea class="form-control" id="form-control-textarea" required></textarea>
+						<div class="_input-placeholder">Your Message<span class="_red">*</span></div>
+					</div>
+				</div>
+				<input class="_btn-main-type" type="submit" value="Send message">
+			</form>
+		</div>
+	</div>
+
+	<!-- Футер с кнопками соц-медиа ----------------------------------------------------------------------------->
+	<footer class="container-fluid">
+		<div class="container _sec-socmedia d-flex justify-content-lg-center justify-content-sm-between flex-wrap justify-content-center px-lg-5">
+			<a href="#" class="_soc-media _facebook">Facebook</a>
+			<a href="#" class="_soc-media _twitter">Twitter</a>
+			<a href="#" class="_soc-media _google">Google+</a>
+			<a href="#" class="_soc-media _linkedin">LinkedIn</a>
+			<a href="#" class="_soc-media _behance">Behance</a>
+			<a href="#" class="_soc-media _dribble">Dribbble</a>
+			<a href="#" class="_soc-media _github">GitHub</a>
+		</div>
+	</footer>
+
+	<div class="coopyright mx-auto" style="max-width: 500px; color: gray; text-align: center; padding: 15px;">Верстка данного макета сделана исключительно в учебных целях. Автор верстки не претендует на коммерческое использование работы.</div>
+</body>
+</html>
