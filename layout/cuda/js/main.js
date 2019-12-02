@@ -46,13 +46,13 @@ jQuery(document).ready(function($) {
 
 		// Скрытие/раскрытие набара при скролле вниз/вверх
 		// Если страница скроллится вниз
-		if((posLast) < $(this).scrollTop()){
+		if((posLast) < $(this).scrollTop() && posLast > 150){
 			// Убираем меню вверх
-			$(".res-boot ._top-menu").stop(true,false).animate({top:'-100%'},300);
+			$(".res-boot ._top-menu").addClass('out');
         // Если страница скроллится вниз
 		}else if((posLast) > $(this).scrollTop()){
 			// Выдвигаем меню сверху
-			$(".res-boot ._top-menu").stop(true,false).animate({top:'0%'},250);
+			$(".res-boot ._top-menu").removeClass('out');
 		}
 		posLast = $(window).scrollTop();
 	});
