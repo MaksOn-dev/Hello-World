@@ -11,6 +11,7 @@
  	src: url("../fonts/Russo_One.ttf") format("truetype");
  	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
  }
 
  
@@ -1549,6 +1550,13 @@ a.icon:hover{
 .block-map{
 	width: 100%;
 	height: 400px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.block-map img{
+	max-width: unset;
 }
 
 
