@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Autoexpert</title>
 	<!-- Сброс стилей -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -22,19 +23,6 @@
 	<script src="js/main.js"></script>
 
 <body>
-
-	<!-- Затемнение при открытии всплывающего окна -->
-	<div class="tint"></div>
-
-	<!-- Всплывающее окно Оставьте заявку ----------------------------------------------------------------- -->
-	<form action="POST" class="f_leave-request" id="f_leave-request_pop-up">
-		<h4 class="title">ОСТАВЬТЕ ЗАЯВКУ</h4>
-		<p class="text">Заполните форму и мы перезвоним Вам в течение 15 минут</p>
-		<input type="text" id="f_leave-request_pop-up_name" class="name" placeholder="Ваше имя" maxlength="20" required>
-		<input type="text" id="f_leave-request_pop-up_phone" class="phone" placeholder="Ваш телефон" maxlength="20" required><label for="phone"></label>
-		<input type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
-	</form>
-
 	<!-- Top menu ----------------------------------------------------------------------------------------- -->
 	<div class="top-menu">
 		<div class="container">
@@ -546,6 +534,15 @@
 		</div>
 	</footer>
 	
+	<!-- Всплывающее окно Оставьте заявку ----------------------------------------------------------------- -->
+	<div class="tint"></div>
+	<form action="POST" class="f_leave-request" id="f_leave-request_pop-up">
+		<h4 class="title">ОСТАВЬТЕ ЗАЯВКУ</h4>
+		<p class="text">Заполните форму и мы перезвоним Вам в течение 15 минут</p>
+		<input type="text" id="f_leave-request_pop-up_name" class="name" placeholder="Ваше имя" maxlength="20" required>
+		<input type="text" id="f_leave-request_pop-up_phone" class="phone" placeholder="Ваш телефон" maxlength="20" required><label for="phone"></label>
+		<input type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+	</form>
 	
 </body>
 </html>
