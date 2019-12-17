@@ -852,7 +852,7 @@ blockquote > p:after{
 }
 
 /* Текст имени и должности в профиле в карточке отзыва */
-.block-happy-clients .section-clients .client-card blockquote cite p{
+.block-happy-clients .section-clients .client-card blockquote cite > span{
 	display: inline-block;
 	color: #f6772c;
 	font-family: 'Lato', sans-serif;
