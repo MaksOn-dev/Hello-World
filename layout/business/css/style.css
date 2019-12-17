@@ -26,10 +26,8 @@
 }
 
 
-/* Opens Sans (light, regular), Lato (light, regular, bold) -----------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400&display=swap');
-/* font-family: 'Lato', sans-serif; */
-/* font-family: 'Open Sans', sans-serif; */
 
 
 
@@ -365,7 +363,7 @@ form input[type=submit]{
 /* Класс для точки, соответствующей активному слайду */
 .slider .slider-dots .dot.active{
 	border: 2px solid #1ca8dd;
-	cursor: normal;
+	cursor: default;
 }
 
 
