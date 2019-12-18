@@ -1434,7 +1434,7 @@ a.icon:hover{
 	transition: none;
 }
 
-.slider .slide-nth-of-type(1){
+.slider .slide:nth-of-type(1){
 	display: block;
 }
 
