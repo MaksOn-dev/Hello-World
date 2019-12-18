@@ -1,24 +1,26 @@
-$(function(){
+$(document).ready(function(){
 	/* Задаем переменные с текущим слайдом и с количеством слайдов. Проверяем наличие 
 	слайдов/элементов в слайдере. Если элементы есть - скрываем все слайды, отображаем текущий слайд. Если элементов 
 	нет - записываем в консоль ошибку.*/
 	
 	// Номер начального слайда (отсчет начинается с нуля)
-	var slide = 0;
+	let slide = 0,
+	// Ссылка на все слайды
+		slidesAll = $('.slider .slideswrapper .slide'),
+	// Ссылка на текущий элемент слайдера
+		slideCurrent = $(slidesAll)[slide],
+	// Узнаем количество слайдов
+		slidesLength = $('.slider .slideswrapper .slide').length - 1;
 
 	// Таймер автоматического перелистывания слайдов
-	var timer = {
+	let timer = {
 		// Должен ли работать по-умолчанию или нет
 		isOn: false,
 		// Работает ли в данный момент
 		isWork: false,
 		// Пауза, в мс
 		time: 5000};
-
-	var timerId;
-
-	// Узнаем количество слайдов
-	var slidesLength = $('.slider .slide').length - 1;
+	let timerId;
 
 	// Проверяем, есть ли слайды в слайдере. Нет - возвращаем ошибку в консоль
 	if(slidesLength < 0){
@@ -69,20 +71,29 @@ $(function(){
 		$(window).scroll(timerOn);
 	}
 
-	// Высота обертки слайда равна высоте слайда с position absolute
-	resizeSlideswrapper();
-	window.onresize = function(){
-		resizeSlideswrapper();
+	// Высота обертки слайда при отрисовке страницы и изменении размера окна
+	onDraw(slideCurrent, resizeParentHeight);
+	$(window).onresize = function(){
+		resizeParentHeight(slideCurrent);
 	};
 
-
-
-	// Фнукция функция отображения слайда
+	// Функция отображения слайда
 	function showSlide(slide){
+		let visible = $('.slider .slide:visible');
 		// Скрываем отображаемый слайд
-		$('.slider .slide:visible').stop().fadeTo(600, 0);
-		// Делаем новый выбранный слайд видимым
-		$('.slider .slide').eq(slide).stop().fadeTo(600, 1);
+		$(visible).stop().fadeTo(150, 0, 'swing', function(){
+			console.log('Hide ' + $(visible).attr('class'));
+			$(visible).hide();
+
+			// Делаем новый выбранный слайд видимым
+			visible = $('.slider .slide').eq(slide);
+			console.log('Show ' + $(visible).attr('class') + " with number " + slide);
+			$(visible).show();
+			$(visible).stop().fadeTo(150, 1);
+		});
+
+		// Изменяем высоту слайда
+		resizeParentHeight(slideCurrent);
 		
 
 		//Убираем класс active точки, у которой он есть
@@ -115,7 +126,6 @@ $(function(){
 		};
 	}
 
-
 	// Функция автоматического перелистывания
 	function sliderInterval(){
 		// Записываем в переменндую следующий слайд
@@ -147,8 +157,35 @@ $(function(){
 		}
 	}
 
-	// Задает высоту обертки слайдов равной высоте слайда
-	function resizeSlideswrapper(){
-		$('.slider .slideswrapper').height($('.slider .slideswrapper .slide').innerHeight());
+	// Задает высоту родителя равной высоте потомка
+	function resizeParentHeight(element){
+		let elementHeight = $(element).innerHeight(),
+			parentElement = $(element).parent();
+
+		$(parentElement).innerHeight(elementHeight);
 	};
+
+	// Выполняет функцию при полной отрисовке элемента
+	function onDraw(element, funcToExec = false){
+		let elementSize = {};
+
+		let interval = setInterval(function(){
+
+			if($(element).innerWidth() === elementSize.width &&
+				$(element).innerHeight() === elementSize.height){	
+
+				clearInterval(interval);
+				if(funcToExec){
+					return funcToExec(element);
+				}
+				return ;
+
+			}else{
+				elementSize.width = $(element).innerWidth();
+				elementSize.height = $(element).innerHeight();
+			};
+
+		}, 100)
+	}
+
 });
