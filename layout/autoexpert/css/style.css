@@ -1434,6 +1434,10 @@ a.icon:hover{
 	transition: none;
 }
 
+.slider .slide-nth-of-type(1){
+	display: block;
+}
+
 /* Контент слайда */
 .slider .slide h4.name{
 	font-size: 20px;
