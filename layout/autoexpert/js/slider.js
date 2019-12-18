@@ -27,9 +27,6 @@ $(document).ready(function(){
 		return console.log('Ошибка - изображения в слайдере не найдены.');
 	};
 
-	//Отображаем нужный слайд
-	showSlide(slide);
-
 	//Событие при клике на точку
 	$('.slider .slider-dots').on('click', '.dot:not(.active)', function() {
 		// Задаем переменной slide значение индекса элемента, по которому произведен клик
