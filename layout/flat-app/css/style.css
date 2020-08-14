@@ -44,8 +44,15 @@
 	transform: translateY(-100%);
 }
 
+._input-container > input,
+._select-container > select,
+textarea.form-control{
+	background: white;
+}
 
-/* Блок header ------------------------------------------------------------------------------------------------------------ */
+
+/* Блок header ------------------------------------------------------------------------------------------------------------ 
+*/
 ._block-header{
 	background-image: url("../img/header-bg.jpg");
 }
@@ -62,15 +69,14 @@
 
 /* Контейнер навбар */
 .res-boot ._container-navbar{
-	transition: .5s;
+	transition: .3s;
 }
 
 /* Навбар */
 .res-boot .navbar{
-	padding-top: 1.295em;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-left: 0;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 1.295em 1.25em;
 }
 
 /* Лого */
@@ -99,6 +105,7 @@ a.navbar-brand img{
 
 /* Кнопка сворачивания меню в навбаре */
 .res-boot .navbar-toggler{
+	outline: none;
 	padding: .6rem .95rem;
 	border-color: rgba(255,255,255,.1);
 	font-size: 1.5rem;
@@ -513,9 +520,12 @@ a.navbar-brand img{
 
 /* Цвет текста select и textarea */
 .res-boot ._block-contact-us .form-group ._select-container select,
-.res-boot #form-control-textarea-1,
 .res-boot #form-control-textarea-1::placeholder{
 	color: #b0b0b0 !important;
+}
+
+.res-boot #form-control-textarea-1{
+	min-height: 150px;
 }
 
 /* Размер и отступы инпутов */
@@ -598,13 +608,17 @@ footer{
 Медиа запросы
 ==================================================================================================================*/
 @media (max-width: 991.98px){
+	.res-boot .navbar {
+		background: rgba(0,0,0,.6);
+	}
+
 	.res-boot .navbar .navbar-nav .nav-item .nav-link,
 	.res-boot .navbar .navbar-nav .nav-item:nth-last-child(2) .nav-link{
 	    padding-right: 0;
 	}
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 767.98px){	
 	/* Нижний оступ блок с текстом в хедере */
 	.res-boot ._block-header__section-text-new-phone{
 		padding-bottom: 30px;
@@ -615,6 +629,10 @@ footer{
 	.res-boot ._block-prices{
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+
+	.res-boot ._block-contact-us .form-group ._select-container {
+		padding-bottom: 15px;
 	}
 }
 

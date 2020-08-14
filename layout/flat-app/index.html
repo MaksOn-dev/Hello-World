@@ -22,39 +22,35 @@
 	<script src="js/main.js"></script>
 
 	<!-- Bootstrap, popper -->
-	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </head>
 
 <body class="res-boot">
 	<!-- Блок header --------------------------------------------------------------------------- -->
 	<div class="_block-header container-fluid d-flex flex-column justify-content-between">
 		<!-- Навигационное меню -->
-		<div class="container-fluid fixed-top pb-2 _container-navbar">
-			<div class="container">
-				<nav class="navbar navbar-expand-lg _header-navbar">
-					<div class="col-3 offset-lg-1">
-						<a href="#" class="navbar-brand"><img src="img/logo-icon.png" alt="Logo">Flat App</a>
-					</div>
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-expanded="false">
-						<i class="fas fa-bars"></i>
-					</button>
-					
-					<div class="navbar-collapse collapse" id="navbarHeader">
-						<ul class="navbar-nav ml-auto d-flex align-items-center">
-							<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-							<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-							<li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-							<li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-							<li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
-							<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-							<li class="nav-item _block-header__login"><a href="#" class="nav-link">Login</a></li>
-						</ul>
-					</div>
-				</nav>	
+		<nav class="navbar container-fluid fixed-top navbar-expand-lg _header-navbar">
+			<div class="col-3 offset-lg-1">
+				<a href="#" class="navbar-brand"><img src="img/logo-icon.png" alt="Logo">Flat App</a>
 			</div>
-		</div>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-expanded="false">
+				<i class="fas fa-bars"></i>
+			</button>
+			
+			<div class="navbar-collapse collapse" id="navbarHeader">
+				<ul class="navbar-nav ml-auto d-flex align-items-center">
+					<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+					<li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+					<li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+					<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+					<li class="nav-item _block-header__login"><a href="#" class="nav-link">Login</a></li>
+				</ul>
+			</div>
+		</nav>	
 		
 		<!-- Контент хедера -->
 		<div class="container _header-content" id="home">
