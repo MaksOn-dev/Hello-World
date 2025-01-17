@@ -1,2 +1,2 @@
 # Portfolio
-Данная страница содержит работы, выполеннные пользователем MaksOn-dev.
+This page includes part of layout works made by user MaksOn-dev.
